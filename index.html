@@ -138,7 +138,15 @@
 
     <section id="view-intro" hidden class="view flex-col h-full p-5 z-10 overflow-y-auto" aria-label="บทนำ">
       <div class="flex items-center justify-between shrink-0">
-        <div id="intro-dots" class="flex gap-1.5" aria-hidden="true"></div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" data-action="intro-prev" id="btn-intro-prev" class="p-1 rounded-full bg-slate-900/80 border border-white/10 text-slate-300 hover:text-white active:scale-95 hidden" aria-label="ย้อนกลับ">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div id="intro-dots" class="flex gap-1.5 mx-1" aria-hidden="true"></div>
+          <button type="button" data-action="intro-next-arrow" id="btn-intro-next-arrow" class="p-1 rounded-full bg-slate-900/80 border border-white/10 text-slate-300 hover:text-white active:scale-95" aria-label="ถัดไป">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
         <button type="button" data-action="intro-skip" class="text-[11px] text-slate-400 hover:text-white px-2 py-1">ข้ามบทนำ ⏭</button>
       </div>
       <div class="mt-3 h-48 sm:h-52 shrink-0 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-white/10 relative overflow-hidden p-2">
@@ -459,7 +467,7 @@
       SHARE_PAGE_URL: '',
       UTM_CAMPAIGN: 'genz_investment_identity',
       STORAGE_KEY: 'trispark:v3',
-      REACT_MS: 3800,
+      REACT_MS: 6000,
       REDUCED_MOTION: window.matchMedia('(prefers-reduced-motion: reduce)').matches
     };
     const UA = navigator.userAgent || '';
@@ -584,71 +592,71 @@
         story: 'เงินเดือนเข้าแล้ว! {name}เปิดแอปธนาคาร เห็นเงินเก็บก้อนแรก 10,000 บาทนอนรออยู่ ระหว่างนั่งรถไฟฟ้ากลับบ้าน ข่าวด่วนก็เด้งขึ้นมา...',
         title: 'จะเริ่มลงทุนเงินก้อนแรกยังไงดี?', text: 'บริษัทเทคโนโลยี AI ระดับโลกที่ทุกคนใช้อยู่ กำลังจะเปิดตัวนวัตกรรมใหม่สัปดาห์หน้า',
         options: [
-          { text: 'ลงหุ้นเทคฯ ตัวนี้เต็ม 10,000 บาท เชื่อในอนาคต', sub: 'เน้นเติบโตไปกับนวัตกรรมเปลี่ยนโลก', w: { pioneer: 2, surfer: 1 }, risk: 5, learn: 'Concentration Risk',
+          { text: 'ลงหุ้นเทคฯ ตัวนี้เต็ม 10,000 บาท เชื่อในอนาคต', sub: 'เน้นเติบโตไปกับนวัตกรรมเปลี่ยนโลก', w: { pioneer: 2, surfer: 1 }, risk: 5, learn: 'Concentration Risk (ความเสี่ยงกระจุกตัว)',
             react: 'ใจถึงมาก! แต่การใส่เงินทั้งหมดในหุ้นตัวเดียวเรียกว่า "ความเสี่ยงกระจุกตัว" ถ้าข่าวไม่เป็นอย่างที่คิด พอร์ตจะสะเทือนทั้งก้อน' },
-          { text: 'เลือกหุ้นปันผลพื้นฐานดีหรือตราสารหนี้ดีกว่า', sub: 'เน้นเงินต้นปลอดภัย มีเงินสดคืนสม่ำเสมอ', w: { fortress: 2 }, risk: 1, learn: 'Inflation',
+          { text: 'เลือกหุ้นปันผลพื้นฐานดีหรือตราสารหนี้ดีกว่า', sub: 'เน้นเงินต้นปลอดภัย มีเงินสดคืนสม่ำเสมอ', w: { fortress: 2 }, risk: 1, learn: 'Inflation (เงินเฟ้อ)',
             react: 'สายชัวร์! เงินต้นนิ่งกว่าแน่นอน แต่อย่าลืมเช็กว่าผลตอบแทนชนะเงินเฟ้อด้วยนะ ไม่งั้นเงินจะค่อยๆ ซื้อของได้น้อยลง' },
-          { text: 'กระจายเงินใส่ทั้งหุ้นเทคฯ หุ้นปันผล และกองทุนรวม', sub: 'ไม่ใส่ไข่ทุกฟองไว้ในตะกร้าเดียว', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Diversification',
+          { text: 'กระจายเงินใส่ทั้งหุ้นเทคฯ หุ้นปันผล และกองทุนรวม', sub: 'ไม่ใส่ไข่ทุกฟองไว้ในตะกร้าเดียว', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Diversification (การกระจายความเสี่ยง)',
             react: 'นี่คือการกระจายความเสี่ยงแบบมือโปร! ถ้าตัวไหนพลาด ตัวอื่นยังช่วยพยุงพอร์ตไว้ได้' } ] },
       { chapter: 'บทที่ 2 · วันที่ตลาดแดงเดือด', short: 'ตลาดแดงเดือด', time: 'เดือนที่ 3 · อังคาร 07:45', wallet: 9500, scene: 'crash',
         story: 'ยังไม่ทันได้จิบกาแฟแก้วแรก เสียงแจ้งเตือนก็ดังรัวๆ จอมือถือของ{name}เต็มไปด้วยตัวเลขสีแดง...',
         title: 'พอร์ตติดลบครั้งแรก ทำยังไงดี?', text: 'ข่าวเศรษฐกิจโลกทำตลาดหุ้นร่วง -5% พอร์ต 10,000 บาทของคุณเหลือ 9,500 บาท',
         options: [
-          { text: 'โอนเงินเพิ่มมาช้อนซื้อทันที', sub: 'ฉวยโอกาสช่วงที่คนอื่นตกใจ', w: { chaos: 2, diver: 1 }, risk: 5, learn: 'Emergency Fund',
+          { text: 'โอนเงินเพิ่มมาช้อนซื้อทันที', sub: 'ฉวยโอกาสช่วงที่คนอื่นตกใจ', w: { chaos: 2, diver: 1 }, risk: 5, learn: 'Emergency Fund (เงินสำรองฉุกเฉิน)',
             react: 'กล้าในวันที่คนอื่นกลัว! แต่ต้องแน่ใจว่าเงินที่โอนเพิ่มไม่ใช่ "เงินสำรองฉุกเฉิน" ที่ต้องเก็บไว้ใช้ยามจำเป็นนะ' },
-          { text: 'หายใจลึกๆ ปิดแอป เชื่อว่าระยะยาวจะฟื้น', sub: 'ยังไม่ขาย = ยังไม่ขาดทุนจริง', w: { zen: 2, pioneer: 1 }, risk: 3, learn: 'Unrealized Loss',
+          { text: 'หายใจลึกๆ ปิดแอป เชื่อว่าระยะยาวจะฟื้น', sub: 'ยังไม่ขาย = ยังไม่ขาดทุนจริง', w: { zen: 2, pioneer: 1 }, risk: 3, learn: 'Unrealized Loss (ขาดทุนที่ยังไม่ขาย)',
             react: 'ใจนิ่งมาก! ตัวเลขติดลบที่ยังไม่ได้ขายเรียกว่า "ขาดทุนทางบัญชี" ถ้าพื้นฐานบริษัทไม่เปลี่ยน ก็ยังไม่ต้องตกใจ' },
-          { text: 'เปิดอ่านบทวิเคราะห์ Trinity Research ก่อน', sub: 'ฟังมุมมองมืออาชีพก่อนตัดสินใจ', w: { social: 2, diver: 1 }, risk: 3, learn: 'Panic Selling',
+          { text: 'เปิดอ่านบทวิเคราะห์ Trinity Research ก่อน', sub: 'ฟังมุมมองมืออาชีพก่อนตัดสินใจ', w: { social: 2, diver: 1 }, risk: 3, learn: 'Panic Selling (การเทขายด้วยความตกใจ)',
             react: 'มีสติสุดๆ! การหาข้อมูลก่อนตัดสินใจ ช่วยกันไม่ให้เผลอ "ขายตอนตกใจ" ซึ่งมักเป็นจุดที่ราคาถูกที่สุด' } ] },
       { chapter: 'บทที่ 3 · แรงกดดันจากเพื่อน', short: 'แรงกดดันจากเพื่อน', time: 'เดือนที่ 4 · เสาร์ 22:10', wallet: 9800, scene: 'chat',
         story: 'คืนวันเสาร์ที่ควรได้พัก แต่ไลน์กลุ่ม "แก๊งมหาลัย" เด้งไม่หยุดจนมือถือของ{name}ร้อนไปหมด...',
         title: 'เพื่อนชวนซื้อตาม ไปด้วยไหม?', text: 'เพื่อนแคปจอพอร์ตกำไร 30% จากหุ้นรถยนต์ไฟฟ้า แล้วเชียร์ให้รีบซื้อตามก่อนราคาจะวิ่งไปไกลกว่านี้',
         options: [
-          { text: 'ซื้อตามทันที! กลัวตกขบวน', sub: 'เกาะกระแสโมเมนตัม', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'FOMO & Stop Loss',
+          { text: 'ซื้อตามทันที! กลัวตกขบวน', sub: 'เกาะกระแสโมเมนตัม', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'FOMO & Stop Loss (กลัวตกรถ & จุดตัดขาดทุน)',
             react: 'ขบวนนี้วิ่งแรง! แต่การซื้อเพราะกลัวตกรถเรียกว่า FOMO ก่อนกดซื้อ ลองกำหนดจุดตัดขาดทุน (Stop Loss) ไว้ก่อนเสมอ' },
-          { text: 'ขอดูงบการเงินและราคาเป้าหมายก่อน', sub: 'เช็กว่าราคายังสมเหตุสมผลไหม', w: { diver: 2, social: 1 }, risk: 3, learn: 'P/E Ratio',
+          { text: 'ขอดูงบการเงินและราคาเป้าหมายก่อน', sub: 'เช็กว่าราคายังสมเหตุสมผลไหม', w: { diver: 2, social: 1 }, risk: 3, learn: 'P/E Ratio (ราคาต่อกำไร)',
             react: 'เยือกเย็น! หุ้นที่ขึ้นมา 30% แล้วอาจแพงเกินมูลค่าจริง ลองเทียบค่า P/E กับบริษัทคู่แข่งก่อนตัดสินใจ' },
-          { text: 'ยินดีกับเพื่อน แต่เราลงทุนตามแผนของเรา', sub: 'มั่นคงในเส้นทางตัวเอง', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Investment Plan',
+          { text: 'ยินดีกับเพื่อน แต่เราลงทุนตามแผนของเรา', sub: 'มั่นคงในเส้นทางตัวเอง', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Investment Plan (แผนการลงทุน)',
             react: 'ยึดแผนตัวเองได้ คือทักษะที่นักลงทุนระดับโลกยังต้องฝึก กำไรของเพื่อนไม่ใช่เส้นชัยของเรา' } ] },
       { chapter: 'บทที่ 4 · สายตรงจาก Trinity', short: 'สายตรง Trinity', time: 'เดือนที่ 6 · พุธ 12:15', wallet: 10100, scene: 'research',
         story: 'พักเที่ยงวันพุธ ระหว่างรอข้าวมันไก่ อีเมลบทวิเคราะห์ฉบับใหม่จาก Trinity Research ก็ส่งถึง{name}พอดี...',
         title: 'นักวิเคราะห์ชี้เป้า จะทำยังไงต่อ?', text: 'หุ้นกลุ่มโครงสร้างพื้นฐานราคาลงมาลึก แต่นักวิเคราะห์มองว่ามีแนวโน้มเติบโตสม่ำเสมอใน 3 ปี',
         options: [
-          { text: 'เชื่อมือผู้เชี่ยวชาญ ซื้อตามคำแนะนำเลย', sub: 'ตัดสินใจตามบทวิเคราะห์มืออาชีพ', w: { social: 2, surfer: 1 }, risk: 3, learn: 'Target Price',
+          { text: 'เชื่อมือผู้เชี่ยวชาญ ซื้อตามคำแนะนำเลย', sub: 'ตัดสินใจตามบทวิเคราะห์มืออาชีพ', w: { social: 2, surfer: 1 }, risk: 3, learn: 'Target Price (ราคาเป้าหมาย)',
             react: 'ไว้ใจมืออาชีพเป็นจุดเริ่มต้นที่ดี! ลองอ่านเหตุผลเบื้องหลัง "ราคาเป้าหมาย" ด้วย จะได้รู้ว่าเมื่อไหร่ควรทบทวน' },
-          { text: 'อ่านบทวิเคราะห์ละเอียด แล้วคิดเองอีกรอบ', sub: 'ตรวจตัวเลขซ้ำเพื่อความชัวร์', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Due Diligence',
+          { text: 'อ่านบทวิเคราะห์ละเอียด แล้วคิดเองอีกรอบ', sub: 'ตรวจตัวเลขซ้ำเพื่อความชัวร์', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Due Diligence (ตรวจสอบข้อมูลด้วยตัวเอง)',
             react: 'ตรวจซ้ำด้วยตัวเองคือหัวใจของนักลงทุน บทวิเคราะห์คือแผนที่ แต่คนเดินทางคือคุณ' },
-          { text: 'ตั้ง DCA สะสมหุ้นตัวนี้ทุกเดือน', sub: 'ซื้อเท่าๆ กันทุกเดือน ไม่ต้องเฝ้าจอ', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Dollar-Cost Averaging',
+          { text: 'ตั้ง DCA สะสมหุ้นตัวนี้ทุกเดือน', sub: 'ซื้อเท่าๆ กันทุกเดือน ไม่ต้องเฝ้าจอ', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Dollar-Cost Averaging (ถัวเฉลี่ยต้นทุน)',
             react: 'DCA ช่วยเฉลี่ยต้นทุนให้อัตโนมัติ ราคาลงก็ได้ของถูก ราคาขึ้นพอร์ตก็โต ไม่ต้องเดาจังหวะเลย' } ] },
       { chapter: 'บทที่ 5 · เดิมพันกับอนาคต', short: 'เดิมพันกับอนาคต', time: 'เดือนที่ 8 · จันทร์ 20:00', wallet: 10300, scene: 'energy',
         story: '{name}ดูสารคดีโลกร้อนจบ แล้วไปเจอบริษัทหนึ่งที่กำลังสร้างฟาร์มพลังงานสะอาดใหญ่ที่สุดในภูมิภาค...',
         title: 'บริษัทงดปันผล 2 ปี เอาไงดี?', text: 'บริษัทพลังงานสะอาดมีนวัตกรรมน่าสนใจ แต่ประกาศว่าจะงดจ่ายปันผล 2 ปี เพื่อนำเงินไปขยายกิจการ',
         options: [
-          { text: 'ซื้อเลย พร้อมถือยาวเติบโตไปกับธุรกิจ', sub: 'ยอมแลกปันผลระยะสั้นกับการเติบโต', w: { pioneer: 2, diver: 1 }, risk: 4, learn: 'Growth Stock',
+          { text: 'ซื้อเลย พร้อมถือยาวเติบโตไปกับธุรกิจ', sub: 'ยอมแลกปันผลระยะสั้นกับการเติบโต', w: { pioneer: 2, diver: 1 }, risk: 4, learn: 'Growth Stock (หุ้นเติบโต)',
             react: 'คุณเลือก "หุ้นเติบโต" ที่เอากำไรไปลงทุนต่อ ถ้าธุรกิจโตจริง มูลค่าจะสะท้อนออกมาในระยะยาว' },
-          { text: 'ขอผ่าน ชอบบริษัทที่จ่ายปันผลชัวร์ๆ', sub: 'เน้นกระแสเงินสดที่แน่นอน', w: { fortress: 2 }, risk: 1, learn: 'Compounding',
+          { text: 'ขอผ่าน ชอบบริษัทที่จ่ายปันผลชัวร์ๆ', sub: 'เน้นกระแสเงินสดที่แน่นอน', w: { fortress: 2 }, risk: 1, learn: 'Compounding (ผลตอบแทนทบต้น)',
             react: 'กระแสเงินสดคือพลัง! ถ้านำปันผลกลับไปลงทุนต่อ จะเกิด "ผลตอบแทนทบต้น" ที่ทำให้พอร์ตโตแบบก้อนหิมะ' },
-          { text: 'เฝ้าดูก่อน มีข่าวดีค่อยเข้าไปเก็งกำไร', sub: 'เข้าออกเป็นรอบตามจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Priced-in',
+          { text: 'เฝ้าดูก่อน มีข่าวดีค่อยเข้าไปเก็งกำไร', sub: 'เข้าออกเป็นรอบตามจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Priced-in (ราคาสะท้อนข่าวแล้ว)',
             react: 'จับจังหวะข่าวคือสไตล์เทรดเดอร์ แต่ระวัง! ข่าวดีบางครั้งถูกสะท้อนในราคาไปแล้วก่อนประกาศ' } ] },
       { chapter: 'บทที่ 6 · สัปดาห์รถไฟเหาะ', short: 'สัปดาห์รถไฟเหาะ', time: 'เดือนที่ 10 · ทั้งสัปดาห์', wallet: 10300, scene: 'coaster',
         story: 'สัปดาห์นี้ตลาดเหวี่ยงจนหัวใจของ{name}เต้นตามกราฟ เปิดแอปทีไรตัวเลขเปลี่ยนสีทุกที...',
         title: 'ตลาดเหวี่ยงแรง รับมือยังไง?', text: 'วันจันทร์พอร์ตบวก +300 บาท วันพุธดิ่ง -400 บาท วันศุกร์เด้งกลับมาเท่าทุน',
         options: [
-          { text: 'ชอบมาก! ตลาดสวิงแบบนี้มีจังหวะทำกำไร', sub: 'สนุกกับความผันผวน', w: { chaos: 2, surfer: 1 }, risk: 5, learn: 'Transaction Cost',
+          { text: 'ชอบมาก! ตลาดสวิงแบบนี้มีจังหวะทำกำไร', sub: 'สนุกกับความผันผวน', w: { chaos: 2, surfer: 1 }, risk: 5, learn: 'Transaction Cost (ต้นทุนธุรกรรม)',
             react: 'ความผันผวนคือสนามเด็กเล่นของคุณ! แต่อย่าลืมว่าค่าธรรมเนียมจากการซื้อขายบ่อยๆ ก็กินกำไรได้เหมือนกัน' },
-          { text: 'ปรับสมดุลพอร์ต ย้ายบางส่วนไปที่ปลอดภัย', sub: 'ลดความแกว่งของพอร์ต', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Rebalancing',
+          { text: 'ปรับสมดุลพอร์ต ย้ายบางส่วนไปที่ปลอดภัย', sub: 'ลดความแกว่งของพอร์ต', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Rebalancing (การปรับสมดุลพอร์ต)',
             react: 'การปรับสมดุลพอร์ตช่วยดึงความเสี่ยงกลับมาอยู่ในระดับที่คุณนอนหลับสบาย' },
-          { text: 'ใช้จังหวะคนตกใจ เก็บหุ้นดีราคาถูก', sub: 'หาของดีช่วงตลาดสั่น', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Margin of Safety',
+          { text: 'ใช้จังหวะคนตกใจ เก็บหุ้นดีราคาถูก', sub: 'หาของดีช่วงตลาดสั่น', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Margin of Safety (ส่วนเผื่อความปลอดภัย)',
             react: 'ตลาดสั่นคือช่วงลดราคา! ถ้ารู้ว่าของชิ้นไหนดีจริง คุณจะซื้อได้อย่างมั่นใจโดยมีส่วนเผื่อความปลอดภัย' } ] },
       { chapter: 'บทที่ 7 · ชีวิตจริงของนักลงทุน', short: 'ชีวิตจริง', time: 'เดือนที่ 12 · วันธรรมดา', wallet: 10450, scene: 'routine',
         story: 'ครบ 1 ปีแล้ว! {name}เริ่มรู้ว่าการลงทุนไม่ใช่การวิ่งระยะสั้น แต่คือมาราธอนที่ต้องเข้ากับชีวิตจริง...',
         title: 'สไตล์ดูแลเงินแบบไหนที่ใช่คุณ?', text: 'ในหนึ่งสัปดาห์ของการทำงาน คุณอยากติดตามเรื่องการลงทุนแบบไหน?',
         options: [
-          { text: 'อ่านสรุปข่าว Trinity 3 บรรทัดตอนจิบกาแฟเช้า', sub: 'อัปเดตสั้นๆ วันละ 2 นาที', w: { social: 2, pioneer: 1 }, risk: 3, learn: 'Financial Literacy',
+          { text: 'อ่านสรุปข่าว Trinity 3 บรรทัดตอนจิบกาแฟเช้า', sub: 'อัปเดตสั้นๆ วันละ 2 นาที', w: { social: 2, pioneer: 1 }, risk: 3, learn: 'Financial Literacy (ความรู้ทางการเงิน)',
             react: 'อ่านข่าวสั้นๆ ทุกวัน สะสมไป 1 ปี = ความเข้าใจตลาดที่ไม่มีใครขโมยไปได้' },
-          { text: 'ตั้งตัดเงินอัตโนมัติวันเงินเดือนออก แล้วไปใช้ชีวิต', sub: 'ให้ระบบทำงานแทน', w: { zen: 2 }, risk: 2, learn: 'Pay Yourself First',
+          { text: 'ตั้งตัดเงินอัตโนมัติวันเงินเดือนออก แล้วไปใช้ชีวิต', sub: 'ให้ระบบทำงานแทน', w: { zen: 2 }, risk: 2, learn: 'Pay Yourself First (หักออมก่อนใช้)',
             react: '"จ่ายให้ตัวเองก่อน" คือเคล็ดลับของคนมีวินัยทางการเงิน เงินเก็บโตได้โดยไม่ต้องใช้แรงใจ' },
-          { text: 'เปิดแอปสแกนหาโอกาสตลอดวัน', sub: 'ติดตามใกล้ชิด ไม่พลาดทุกจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Overtrading',
+          { text: 'เปิดแอปสแกนหาโอกาสตลอดวัน', sub: 'ติดตามใกล้ชิด ไม่พลาดทุกจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Overtrading (การซื้อขายบ่อยเกินไป)',
             react: 'พลังงานล้นเหลือ! แต่อย่าลืมพักสายตา การเฝ้าจอทั้งวันทำให้ตัดสินใจด้วยอารมณ์ได้ง่ายขึ้น' } ] }
     ];
 
@@ -766,6 +774,10 @@
       INTRO.forEach((_, i) => { const d = el('span', 'h-1.5 rounded-full transition-all'); d.style.width = i === introIdx ? '18px' : '6px'; d.style.background = i <= introIdx ? '#10B981' : '#334155'; dots.appendChild(d); });
       restartAnim($('intro-body'), 'fade-in-scale');
       playSound('slide');
+      
+      // ควบคุมการแสดงผลของปุ่มลูกศรหน้า Intro
+      if ($('btn-intro-prev')) $('btn-intro-prev').classList.toggle('hidden', introIdx === 0);
+      if ($('btn-intro-next-arrow')) $('btn-intro-next-arrow').classList.toggle('hidden', introIdx === INTRO.length - 1);
     }
     function saveName() {
       const v = ($('nickname').value || '').replace(/\s+/g, ' ').trim().slice(0, 16);
@@ -775,6 +787,9 @@
       playSound('tap');
       if (introIdx < INTRO.length - 1) { introIdx++; renderIntro(); return; }
       saveName(); track('intro_complete', { named: !!state.name }); startGame('intro');
+    }
+    function introPrev() {
+      if (introIdx > 0) { playSound('tap'); introIdx--; renderIntro(); }
     }
     function introSkip() { playSound('tap'); saveName(); track('intro_skip', { at: introIdx + 1 }); startGame('intro_skip'); }
 
@@ -1185,6 +1200,8 @@
     const actions = {
       'start': () => { playSound('tap'); openIntro(); },
       'intro-next': introNext,
+      'intro-prev': introPrev,
+      'intro-next-arrow': introNext,
       'intro-skip': introSkip,
       'continue': advance,
       'open-about': () => { playSound('tap'); openModal('modal-about'); },

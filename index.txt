@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#030914" />
+  <title>TriSpark – คุณคือนักลงทุนตัวไหนใน 7 ตัวละคร? | Trinity Securities</title>
+  <meta name="description" content="ออกเดินทาง 12 เดือนในโลกการลงทุนจำลอง ตอบ 7 สถานการณ์ แล้วค้นพบตัวละครนักลงทุนของคุณ โดย Trinity Securities" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TriSpark – คุณคือนักลงทุนตัวไหน?" />
+  <meta property="og:description" content="Neon Surfer, Zen Capybara, Volatile Fox... 7 ตัวละคร 90 วินาที" />
+  <meta property="og:image" content="https://YOUR-DOMAIN/og/og-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,8 94,88 6,88' fill='%2306101E' stroke='%2310B981' stroke-width='6'/%3E%3Cpath d='M55 22 L35 55 H52 L45 80 L68 47 H49 Z' fill='%23F5B718'/%3E%3C/svg%3E" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Kanit', 'sans-serif'], display: ['Space Grotesk', 'Kanit', 'sans-serif'] } } } };
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; }
+    body { font-family: 'Kanit', sans-serif; margin: 0; color: #fff; overflow-x: hidden; background: radial-gradient(circle at top center, #0a192f 0%, #030914 100%); }
+    .view { display: flex; } .view[hidden], .modal[hidden] { display: none; } .modal { display: flex; }
+    .glass-app-frame { background: rgba(15,23,42,.92); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); border: 1px solid rgba(255,255,255,.14); box-shadow: 0 25px 60px -15px rgba(0,0,0,.9); }
+    .glass-btn, .option-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 4px 14px rgba(0,0,0,.25); transition: background .2s, border-color .2s, transform .2s, box-shadow .2s, opacity .2s; }
+    @media (hover: hover) { .glass-btn:hover, .option-card:hover { background: rgba(16,185,129,.14); border-color: rgba(16,185,129,.6); transform: translate3d(0,-2px,0); box-shadow: 0 8px 20px rgba(16,185,129,.2); } }
+    .option-card:active { transform: scale(.98); }
+    .option-card.is-selected { background: rgba(16,185,129,.25); border-color: #10B981; box-shadow: 0 0 0 2px rgba(16,185,129,.35); }
+    .option-card.is-dim { opacity: .4; }
+    .choice-badge { background: linear-gradient(135deg, rgba(16,185,129,.25), rgba(2,132,199,.25)); border: 1px solid rgba(16,185,129,.5); color: #10b981; }
+    button:focus-visible, a:focus-visible, input:focus-visible, [role="button"]:focus-visible { outline: 2px solid #10B981; outline-offset: 2px; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    .ig-grad { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); }
+    .hero-card { border-radius: 1.5rem; padding: 1.5px; background: linear-gradient(140deg, var(--c), rgba(255,255,255,.06) 40%, rgba(255,255,255,.06) 60%, var(--c)); box-shadow: 0 24px 50px -24px var(--c); }
+    .hero-inner { border-radius: calc(1.5rem - 1.5px); background: radial-gradient(circle at 50% 20%, var(--c2), transparent 62%), linear-gradient(180deg, #0B1424, #050B16); position: relative; overflow: hidden; }
+    .hero-inner::after { content: ''; position: absolute; inset: -50%; background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,.10) 50%, transparent 58%); animation: shine 3.6s ease-in-out 1.2s infinite; pointer-events: none; }
+    .theme-text { color: var(--c); }
+    .scene text { font-family: 'Kanit', sans-serif; }
+    .scene text.g { font-family: 'Space Grotesk', 'Kanit', sans-serif; }
+    .sc-float { animation: scFloat 3.2s ease-in-out infinite; }
+    .sc-blink { animation: scBlink 1.2s ease-in-out infinite; }
+    .sc-pop { animation: scPop .6s cubic-bezier(.16,1,.3,1) .15s both; transform-box: fill-box; transform-origin: center; }
+    .sc-spin { animation: spin 3s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .sc-drop { animation: scDrop 1.8s ease-in infinite; }
+    @keyframes scFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    @keyframes scBlink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+    @keyframes scPop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: scale(1); } }
+    @keyframes scDrop { 0% { transform: translateY(-14px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(34px); opacity: 0; } }
+    @keyframes shine { 0% { transform: translateX(-60%); } 55%, 100% { transform: translateX(60%); } }
+    @keyframes reveal { from { opacity: 0; transform: perspective(900px) rotateY(80deg) scale(.9); } to { opacity: 1; transform: none; } }
+    @keyframes floating { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-8px) rotate(1.2deg); } }
+    @keyframes pulseGlow { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: .75; transform: scale(1.08); } }
+    @keyframes slideLeft { from { opacity: 0; transform: translate3d(20px,0,0); } to { opacity: 1; transform: none; } }
+    @keyframes fadeInScale { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: none; } }
+    @keyframes sheetUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes confettiFall { to { transform: translate3d(var(--dx), 110vh, 0) rotate(var(--rot)); } }
+    .reveal { animation: reveal .75s cubic-bezier(.16,1,.3,1) both; }
+    .animate-float { animation: floating 4s ease-in-out infinite; }
+    .pulse-glow { animation: pulseGlow 3.5s ease-in-out infinite; }
+    .slide-left { animation: slideLeft .35s cubic-bezier(.16,1,.3,1) both; }
+    .fade-in-scale { animation: fadeInScale .3s cubic-bezier(.16,1,.3,1) both; }
+    .sheet-up { animation: sheetUp .35s cubic-bezier(.16,1,.3,1) both; }
+    .spin-ring { animation: spin 1.1s linear infinite; }
+    .silhouette { filter: brightness(0) invert(1); opacity: .22; }
+    .locked { filter: grayscale(1); opacity: .35; }
+    .confetti-piece { position: absolute; top: -16px; width: 8px; height: 14px; border-radius: 2px; animation-name: confettiFall; animation-timing-function: cubic-bezier(.25,.6,.4,1); animation-fill-mode: forwards; }
+    .stat-fill { transition: width 1.1s cubic-bezier(.16,1,.3,1); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: rgba(15,23,42,.6); } ::-webkit-scrollbar-thumb { background: rgba(16,185,129,.4); border-radius: 4px; }
+    .scroll-body { flex: 1 1 0%; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+    .safe-bottom { padding-bottom: calc(.75rem + env(safe-area-inset-bottom, 0px)); }
+  </style>
+</head>
+<body class="flex items-center justify-center p-0 sm:p-4 min-h-[100dvh]">
+
+  <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="triOuterGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E11925"/><stop offset="50%" stop-color="#F5B718"/><stop offset="100%" stop-color="#10B981"/></linearGradient>
+      <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F5B718"/><stop offset="50%" stop-color="#10B981"/><stop offset="100%" stop-color="#0284C7"/></linearGradient>
+      <symbol id="i-trinity" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A153B" stroke="#F5B718" stroke-width="8"/><polygon points="50,10 90,74 10,74" fill="#FFFFFF"/><rect x="10" y="72" width="80" height="22" fill="#FFFFFF"/><polygon points="50,16 85,73 15,73" fill="#E21B23"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 120 120"><polygon points="60,10 110,98 10,98" fill="url(#triOuterGrad)" fill-opacity="0.15" stroke="url(#triOuterGrad)" stroke-width="5" stroke-linejoin="round"/><polygon points="60,18 102,92 18,92" fill="#06101E" stroke="#10B981" stroke-width="2.5" stroke-linejoin="round"/><path d="M66 22 L38 60 H62 L52 98 L84 54 H58 L66 22 Z" fill="url(#boltGrad)" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <main class="w-full sm:max-w-[420px] h-[100dvh] sm:h-[94vh] sm:max-h-[880px] glass-app-frame sm:rounded-3xl flex flex-col relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none pulse-glow" aria-hidden="true"></div>
+    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none pulse-glow" aria-hidden="true"></div>
+    <div id="confetti" class="absolute inset-0 overflow-hidden pointer-events-none z-30" aria-hidden="true"></div>
+
+    <section id="view-landing" class="view flex-col justify-between h-full p-5 sm:p-6 z-10 overflow-y-auto slide-left" aria-labelledby="landing-title">
+      <header class="flex flex-col items-center pt-1 text-center">
+        <div class="flex items-center gap-2 mb-2 px-3.5 py-1 rounded-full bg-slate-900/80 border border-white/10">
+          <svg class="w-4 h-4 rounded" aria-hidden="true"><use href="#i-trinity"/></svg>
+          <span class="text-[11px] font-semibold tracking-wider text-emerald-400 uppercase font-display">Trinity Securities</span>
+        </div>
+        <h1 id="landing-title" class="text-3xl sm:text-4xl font-bold tracking-tight font-display bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-emerald-400">TriSpark</h1>
+        <p class="text-xs text-slate-400 font-light mt-0.5">Spark Your Financial Identity</p>
+      </header>
+
+      <div id="referral-banner" hidden class="mt-3 px-3.5 py-2.5 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-xs text-amber-200 text-center fade-in-scale"></div>
+
+      <div class="relative my-auto flex flex-col items-center py-3">
+        <div class="relative w-52 h-52 sm:w-56 sm:h-56">
+          <div id="showcase-glow" class="absolute inset-6 rounded-full blur-2xl opacity-50 transition-colors duration-700" aria-hidden="true"></div>
+          <div class="absolute inset-0 rounded-full border border-white/10 bg-slate-900/40" aria-hidden="true"></div>
+          <div id="showcase-art" class="relative w-full h-full p-2 animate-float transition-opacity duration-300" aria-hidden="true"></div>
+        </div>
+        <p class="text-[10px] tracking-widest text-slate-400 uppercase mt-3 font-display">คุณคือตัวไหนใน 7 ตัวละครนี้?</p>
+        <p id="showcase-name" class="text-sm font-semibold mt-0.5 h-5 transition-colors duration-500"></p>
+        <div id="showcase-dots" class="flex gap-1.5 mt-2" aria-hidden="true"></div>
+      </div>
+
+      <div class="space-y-3 mb-1">
+        <div class="bg-slate-900/85 p-4 rounded-2xl border border-white/10">
+          <p class="text-sm text-slate-200 leading-relaxed">ออกเดินทาง <span class="text-emerald-400 font-semibold">12 เดือน</span> ในโลกการลงทุนจำลอง กับเงินเก็บก้อนแรก <span class="text-emerald-400 font-semibold">10,000 บาท</span></p>
+          <p class="text-[11px] text-slate-400 mt-2 font-light border-t border-white/10 pt-2">ทุกการตัดสินใจจะเผยตัวละครนักลงทุนที่ซ่อนอยู่ในตัวคุณ</p>
+          <div class="flex flex-wrap gap-1.5 mt-2.5">
+            <span class="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] text-slate-300">7 บทเรื่องราว</span>
+            <span class="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] text-slate-300">~2 นาที</span>
+            <span class="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] text-slate-300">ได้คำศัพท์การลงทุน 7 คำ</span>
+          </div>
+        </div>
+        <button type="button" data-action="start" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-base shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all">เริ่มการเดินทาง 🚀</button>
+        <div class="grid grid-cols-2 gap-2">
+          <button type="button" data-action="open-gallery" class="py-2.5 rounded-xl glass-btn text-xs text-slate-300 hover:text-white">🃏 สมุดสะสม <span id="landing-collect" class="text-emerald-400 font-mono"></span></button>
+          <button type="button" data-action="view-last" id="btn-view-last" class="py-2.5 rounded-xl glass-btn text-xs text-slate-300 hover:text-white">ดูผลลัพธ์ล่าสุด</button>
+        </div>
+        <button type="button" data-action="open-about" class="w-full text-[11px] text-slate-400 hover:text-white hover:underline underline-offset-2">💡 เกี่ยวกับ TriSpark</button>
+        <p class="text-[10px] text-slate-500 text-center leading-snug">เพื่อการเรียนรู้เท่านั้น ไม่ใช่คำแนะนำการลงทุน</p>
+      </div>
+    </section>
+
+    <section id="view-intro" hidden class="view flex-col h-full p-5 z-10 overflow-y-auto" aria-label="บทนำ">
+      <div class="flex items-center justify-between shrink-0">
+        <div id="intro-dots" class="flex gap-1.5" aria-hidden="true"></div>
+        <button type="button" data-action="intro-skip" class="text-[11px] text-slate-400 hover:text-white px-2 py-1">ข้ามบทนำ ⏭</button>
+      </div>
+      <div class="mt-3 h-48 sm:h-52 shrink-0 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-white/10 relative overflow-hidden p-2">
+        <div class="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] opacity-10" aria-hidden="true"></div>
+        <div id="intro-scene" class="scene relative w-full h-full" aria-hidden="true"></div>
+      </div>
+      <div id="intro-body" class="mt-4 flex-1">
+        <p id="intro-tag" class="text-[10px] font-mono font-bold tracking-widest text-emerald-400"></p>
+        <h2 id="intro-title" class="text-lg font-semibold leading-snug mt-1"></h2>
+        <p id="intro-text" class="text-sm text-slate-300 leading-relaxed mt-2"></p>
+        <div id="intro-name" hidden class="mt-4">
+          <label for="nickname" class="text-xs text-slate-300">ก่อนออกเดินทาง ให้เราเรียกคุณว่าอะไรดี?</label>
+          <input id="nickname" type="text" maxlength="16" autocomplete="nickname" enterkeyhint="go" placeholder="ชื่อเล่น (ไม่ใส่ก็ได้)" class="mt-1.5 w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/15 text-sm text-white placeholder:text-slate-500 focus:border-emerald-400 outline-none" />
+          <p class="text-[10px] text-slate-500 mt-1">ใช้แสดงในเรื่องและบนการ์ดของคุณเท่านั้น เก็บไว้ในเครื่องนี้ ไม่ส่งไปยังเซิร์ฟเวอร์</p>
+        </div>
+      </div>
+      <button type="button" id="btn-intro-next" data-action="intro-next" class="mt-4 shrink-0 w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-base shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all"></button>
+    </section>
+
+    <section id="view-game" hidden class="view flex-col h-full p-4 sm:p-5 z-10 overflow-hidden relative" aria-label="แบบทดสอบ">
+      <div class="flex flex-col gap-2.5 pt-1 shrink-0">
+        <div id="progress" class="flex gap-1.5 w-full" role="progressbar" aria-label="ความคืบหน้า" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"></div>
+        <div class="flex items-center gap-2">
+          <button type="button" data-action="back" aria-label="ย้อนกลับ" class="p-1.5 rounded-full bg-slate-900/80 border border-white/10 text-slate-300 hover:text-white active:scale-95 shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="min-w-0 flex-1">
+            <p id="chapter-label" class="text-xs font-semibold text-white truncate"></p>
+            <p id="chapter-time" class="text-[10px] text-slate-400 font-mono truncate"></p>
+          </div>
+          <div class="px-2.5 py-1 rounded-xl bg-slate-900/80 border border-white/10 text-right shrink-0">
+            <p class="text-[9px] text-slate-400 leading-none">พอร์ตจำลอง</p>
+            <p id="wallet" class="text-xs font-bold font-mono leading-tight mt-0.5">฿10,000</p>
+          </div>
+          <button type="button" data-action="toggle-sound" id="btn-sound" aria-pressed="true" aria-label="เปิด/ปิดเสียง" class="p-1.5 rounded-full bg-slate-900/80 border border-white/10 active:scale-95 shrink-0">
+            <svg id="icon-sound-on" class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+            <svg id="icon-sound-off" class="w-4 h-4 text-slate-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative my-2.5 h-40 sm:h-44 shrink-0">
+        <div class="w-full h-full rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-emerald-500/20 relative overflow-hidden p-2">
+          <div class="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] opacity-10" aria-hidden="true"></div>
+          <span id="scenario-badge" class="absolute top-2 left-2 z-20 text-[9px] px-2 py-0.5 rounded-full bg-slate-950/80 text-emerald-300 font-mono border border-emerald-500/30">01/07</span>
+          <div id="scenario-scene" class="scene relative z-10 w-full h-full" role="img"></div>
+        </div>
+      </div>
+
+      <div id="game-card" class="flex flex-col gap-2.5 scroll-body pb-2">
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-white/10" aria-live="polite">
+          <p id="scenario-story" class="text-[11px] text-slate-400 italic leading-relaxed mb-2.5 pl-2.5 border-l-2 border-emerald-500/40"></p>
+          <span id="scenario-tag" class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest font-mono block mb-0.5"></span>
+          <h2 id="scenario-title" class="text-sm font-semibold text-white leading-snug mb-1"></h2>
+          <p id="scenario-text" class="text-xs text-slate-200 leading-relaxed"></p>
+        </div>
+        <div id="options" class="space-y-2" role="group" aria-labelledby="scenario-title"></div>
+        <p class="hidden sm:block text-[10px] text-slate-500 text-center">เคล็ดลับ: กด 1–3 หรือ A–C เพื่อเลือก · Enter เพื่อไปต่อ</p>
+      </div>
+
+      <div id="reaction" hidden data-action="continue" role="button" tabindex="0" aria-live="polite" class="absolute inset-x-3 bottom-3 z-20 rounded-2xl p-4 bg-slate-900/95 backdrop-blur-md border border-emerald-500/40 shadow-2xl sheet-up cursor-pointer">
+        <div class="flex items-center gap-2 mb-1.5">
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-200">📘 คำศัพท์: <span id="reaction-learn" class="font-semibold"></span></span>
+          <span class="ml-auto text-[10px] text-slate-500">แตะเพื่อไปต่อ</span>
+        </div>
+        <p id="reaction-text" class="text-[13px] text-slate-100 leading-relaxed"></p>
+        <div class="mt-3 flex items-center gap-3">
+          <div class="flex-1 h-1 rounded-full bg-slate-800 overflow-hidden"><div id="reaction-bar" class="h-full bg-emerald-400" style="width:0"></div></div>
+          <span class="text-xs font-semibold text-emerald-400">ไปต่อ →</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-analyzing" hidden class="view flex-col items-center justify-center h-full p-6 z-10 text-center" aria-live="polite">
+      <div class="relative w-40 h-40 mb-6" aria-hidden="true">
+        <div class="absolute inset-0 rounded-full border-4 border-emerald-500/15 border-t-emerald-400 spin-ring"></div>
+        <div id="analyzing-art" class="absolute inset-5 silhouette"></div>
+      </div>
+      <p class="text-[10px] tracking-widest text-emerald-400 uppercase font-bold font-display mb-1">Epilogue</p>
+      <p id="analyzing-text" class="text-sm text-slate-200"></p>
+    </section>
+
+    <section id="view-result" hidden class="view flex-col h-full w-full overflow-hidden z-10" aria-labelledby="result-name">
+      <div id="result-scroll" class="scroll-body p-4 sm:p-5 pb-6 space-y-3.5">
+        <p id="result-owner" class="text-center text-[10px] tracking-widest text-emerald-400 uppercase font-bold font-display pt-1"></p>
+
+        <article id="hero-card" class="hero-card">
+          <div class="hero-inner p-4 pt-3 text-center">
+            <div class="flex justify-between items-center relative z-10">
+              <span id="hero-no" class="text-[10px] font-mono text-slate-400"></span>
+              <span class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-slate-900/90 border border-amber-400/30">
+                <svg class="w-3.5 h-3.5 rounded" aria-hidden="true"><use href="#i-trinity"/></svg>
+                <span class="text-[9px] text-slate-200 font-bold tracking-wider">TRINITY</span>
+              </span>
+            </div>
+            <div class="relative mx-auto w-44 h-44 sm:w-48 sm:h-48 -mt-1">
+              <div class="absolute inset-6 rounded-full blur-2xl opacity-50" style="background:var(--c)" aria-hidden="true"></div>
+              <div id="hero-art" class="relative w-full h-full animate-float" aria-hidden="true"></div>
+            </div>
+            <h2 id="result-name" class="text-2xl font-bold text-white font-display tracking-tight"></h2>
+            <p id="result-title-th" class="text-base font-semibold theme-text"></p>
+            <p id="result-char" class="text-[11px] text-slate-400 mt-0.5"></p>
+            <p id="result-desc" class="text-xs text-slate-300 leading-relaxed mt-3 px-1"></p>
+            <div id="result-tags" class="flex flex-wrap gap-1.5 justify-center mt-3"></div>
+            <div id="result-stats" class="grid grid-cols-2 gap-x-4 gap-y-2.5 mt-4 pt-3 border-t border-white/10 text-left"></div>
+          </div>
+        </article>
+
+        <button type="button" data-action="open-share" class="w-full py-3 rounded-2xl ig-grad text-white font-bold text-sm shadow-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          แชร์ลง IG Story / Facebook
+        </button>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div class="bg-emerald-500/10 p-3 rounded-2xl border border-emerald-500/30">
+            <h3 class="text-[11px] text-emerald-300 font-bold mb-1">⚡ พลังพิเศษ</h3>
+            <p id="result-power" class="text-[11px] text-slate-200 leading-snug"></p>
+          </div>
+          <div class="bg-rose-500/10 p-3 rounded-2xl border border-rose-500/30">
+            <h3 class="text-[11px] text-rose-300 font-bold mb-1">⚠️ จุดที่ต้องระวัง</h3>
+            <p id="result-weakness" class="text-[11px] text-slate-200 leading-snug"></p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-white/10">
+          <h3 class="text-[11px] text-sky-400 font-bold mb-2.5">🧬 DNA การลงทุนของคุณ</h3>
+          <div id="result-dna" class="space-y-2"></div>
+          <div class="mt-3.5 pt-3 border-t border-white/10">
+            <div class="flex justify-between items-center text-[11px] mb-1.5">
+              <span class="text-slate-400">ระดับความเสี่ยงที่รับได้</span>
+              <span id="risk-label" class="text-white font-semibold"></span>
+            </div>
+            <div id="risk-meter" class="flex gap-1" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-violet-500/30">
+          <h3 class="text-[11px] text-violet-300 font-bold mb-2.5">🗺️ เส้นทาง 12 เดือน & คำศัพท์ที่คุณเก็บได้</h3>
+          <ul id="result-journey" class="space-y-1.5"></ul>
+        </div>
+
+        <div class="bg-amber-500/10 p-3.5 rounded-2xl border border-amber-500/30">
+          <h3 class="text-[11px] text-amber-300 font-bold mb-1.5">🧠 แนวคิดหลัก (Core Mindset)</h3>
+          <p id="result-mindset" class="text-xs text-slate-200 leading-relaxed italic pl-2.5 border-l-2 border-amber-400"></p>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-emerald-500/30">
+          <h3 class="text-[11px] text-emerald-400 font-bold mb-3">📊 สัดส่วนสินทรัพย์ตัวอย่าง</h3>
+          <div class="flex items-center gap-4">
+            <div id="result-donut" class="w-28 h-28 shrink-0" role="img"></div>
+            <div id="result-legend" class="flex-1 space-y-2 text-xs"></div>
+          </div>
+          <p class="text-[10px] text-slate-500 mt-3">*เป็นตัวอย่างเพื่อการเรียนรู้ ควรปรับตามเป้าหมาย ระยะเวลา และผล Suitability Test ของคุณ</p>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-white/10">
+          <h3 class="text-[11px] text-pink-300 font-bold mb-2.5">🤝 เคมีการลงทุนกับตัวละครอื่น</h3>
+          <div class="grid grid-cols-2 gap-2.5">
+            <div id="result-buddy" class="rounded-xl bg-emerald-500/5 border border-emerald-500/25 p-2.5 text-center"></div>
+            <div id="result-clash" class="rounded-xl bg-rose-500/5 border border-rose-500/25 p-2.5 text-center"></div>
+          </div>
+          <p class="text-[10px] text-slate-500 mt-2.5 text-center">ส่งลิงก์ให้เพื่อน แล้วดูว่าคุณเป็นคู่หูหรือคู่ปะทะ 😼</p>
+        </div>
+
+        <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-white/10">
+          <h3 class="text-[11px] text-emerald-400 font-bold mb-1.5">💡 เกร็ดความรู้จาก Trinity</h3>
+          <p id="result-wisdom" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-white/10">
+          <h3 class="text-[11px] text-sky-400 font-bold mb-2">✅ เช็กลิสต์ก่อนเริ่มลงทุนจริง</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• มีเงินสำรองฉุกเฉินอย่างน้อย 3–6 เดือนของค่าใช้จ่าย</li>
+            <li>• ลงทุนเฉพาะเงินที่ไม่ต้องใช้ในระยะสั้น</li>
+            <li>• ทำแบบประเมิน Suitability Test ตอนเปิดบัญชี</li>
+            <li>• เริ่มจากจำนวนน้อย แล้วค่อยเพิ่มเมื่อเข้าใจมากขึ้น</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-emerald-950 p-3.5 rounded-2xl border border-emerald-500/40">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="text-[11px] text-emerald-400 font-bold">🏛️ สิ่งที่ Trinity ช่วยคุณได้</h3>
+            <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono">MATCHED</span>
+          </div>
+          <p id="result-match-title" class="text-sm text-white font-semibold leading-snug pt-1"></p>
+          <p id="result-match-detail" class="text-xs text-slate-300 leading-relaxed mt-0.5"></p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2 pt-1">
+          <button type="button" data-action="copy-link" class="py-2.5 rounded-xl glass-btn text-[11px] text-slate-200">🔗 ชวนเพื่อน</button>
+          <button type="button" data-action="open-gallery" class="py-2.5 rounded-xl glass-btn text-[11px] text-slate-200">🃏 สมุดสะสม</button>
+          <button type="button" data-action="restart" class="py-2.5 rounded-xl glass-btn text-[11px] text-slate-200">🔄 เล่นใหม่</button>
+        </div>
+
+        <p class="text-[10px] text-slate-500 leading-relaxed text-center px-2">
+          ผลลัพธ์นี้จัดทำเพื่อการเรียนรู้และความบันเทิง ไม่ใช่คำแนะนำการลงทุน และไม่ใช่แบบประเมินความเหมาะสมในการลงทุน (Suitability Test) ตามเกณฑ์ ก.ล.ต. ตัวเลขพอร์ตในเรื่องเป็นการจำลอง การลงทุนมีความเสี่ยง ผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน
+        </p>
+      </div>
+
+      <div class="shrink-0 w-full px-3 pt-3 sm:px-4 safe-bottom bg-slate-950/95 backdrop-blur-md border-t border-emerald-500/30">
+        <button type="button" data-action="open-account" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all">เริ่มลงทุนจริงกับ Trinity 🚀</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-about" hidden class="modal fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <div class="glass-app-frame w-full max-w-md p-6 rounded-3xl relative fade-in-scale max-h-[90dvh] overflow-y-auto">
+      <button type="button" data-action="close-modal" aria-label="ปิด" class="absolute top-3 right-3 text-slate-400 hover:text-white p-2 text-lg">✕</button>
+      <div class="flex items-center gap-2.5 mb-3">
+        <svg class="w-8 h-8" aria-hidden="true"><use href="#i-spark"/></svg>
+        <div>
+          <h3 id="about-title" class="text-base font-bold text-white font-display">TriSpark คืออะไร?</h3>
+          <p class="text-[10px] text-emerald-400 font-mono font-bold uppercase">Trinity Securities Hackathon 2026</p>
+        </div>
+      </div>
+      <div class="space-y-3 text-xs text-slate-300 leading-relaxed">
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-white/10"><h4 class="font-semibold text-white mb-1">✨ Spark Your Identity</h4><p>เปลี่ยนเรื่องการลงทุนที่ดูยาก ให้เป็นเรื่องราวการเดินทาง 12 เดือนสั้นๆ สำหรับ Gen Z และ First Jobber</p></div>
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-white/10"><h4 class="font-semibold text-white mb-1">🎯 7 บท · 7 ตัวละคร · 7 คำศัพท์</h4><p>พอร์ตติดลบ, กระแส FOMO, หุ้นงดปันผล ฯลฯ ทุกการตัดสินใจได้ทั้งตัวตนและความรู้ติดตัวกลับไป</p></div>
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-white/10"><h4 class="font-semibold text-emerald-400 mb-1">🚀 ต่อยอดสู่การลงทุนจริง</h4><p>แชร์การ์ดลง Story ชวนเพื่อนมาหาคู่หู แล้วเริ่มเปิดบัญชีกับ Trinity เมื่อพร้อม</p></div>
+      </div>
+      <button type="button" data-action="start" class="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-sm">เริ่มการเดินทาง 🚀</button>
+    </div>
+  </div>
+
+  <div id="modal-gallery" hidden class="modal fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+    <div class="glass-app-frame w-full max-w-md p-5 rounded-3xl relative fade-in-scale max-h-[90dvh] overflow-y-auto">
+      <button type="button" data-action="close-modal" aria-label="ปิด" class="absolute top-3 right-3 text-slate-400 hover:text-white p-2 text-lg">✕</button>
+      <h3 id="gallery-title" class="text-base font-bold font-display">🃏 สมุดสะสมตัวละคร</h3>
+      <p class="text-[11px] text-slate-400 mb-3">สะสมแล้ว <span id="gallery-count" class="text-emerald-400 font-mono font-bold"></span> · ลองตอบด้วยมุมมองอื่นเพื่อปลดล็อกเพิ่ม</p>
+      <div id="gallery-grid" class="grid grid-cols-2 gap-2.5"></div>
+    </div>
+  </div>
+
+  <div id="modal-share" hidden class="modal fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 items-end sm:items-center justify-center p-0 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="share-title">
+    <div class="glass-app-frame w-full max-w-md p-5 rounded-t-3xl sm:rounded-3xl relative sheet-up max-h-[92dvh] overflow-y-auto safe-bottom">
+      <button type="button" data-action="close-modal" aria-label="ปิด" class="absolute top-3 right-3 text-slate-400 hover:text-white p-2 text-lg">✕</button>
+      <h3 id="share-title" class="text-base font-bold font-display">📤 แชร์ตัวตนของคุณ</h3>
+      <p class="text-[11px] text-slate-400 mb-3">ให้เพื่อนรู้ว่าคุณเป็นตัวไหน แล้วชวนมาหาคู่หูการลงทุน</p>
+
+      <div class="flex gap-3 items-start mb-3">
+        <div class="relative w-28 shrink-0 aspect-[9/16] rounded-xl overflow-hidden border border-white/10 bg-slate-900">
+          <img id="share-preview" alt="ตัวอย่างการ์ดผลลัพธ์ 9:16" class="w-full h-full object-cover" />
+          <div id="share-loading" class="absolute inset-0 flex items-center justify-center bg-slate-900"><div class="w-8 h-8 rounded-full border-2 border-emerald-500/20 border-t-emerald-400 spin-ring"></div></div>
+        </div>
+        <div class="text-[11px] text-slate-300 leading-relaxed space-y-2">
+          <p><b class="text-white">IG Story:</b> กดปุ่มด้านล่าง → เลือก Instagram → Story</p>
+          <p>ลิงก์จะถูก<b class="text-white">คัดลอกให้อัตโนมัติ</b> วางใน "สติกเกอร์ลิงก์" เพื่อให้เพื่อนกดมาเล่นต่อได้</p>
+          <p class="text-slate-500">หรือกดค้างที่รูปเพื่อบันทึกลงเครื่อง</p>
+        </div>
+      </div>
+
+      <div id="share-inapp" hidden class="mb-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-400/30 text-[11px] text-amber-200 leading-relaxed">
+        ดูเหมือนคุณเปิดอยู่ในแอป Facebook / IG / LINE · แตะ ⋯ มุมขวาบน แล้วเลือก "เปิดในเบราว์เซอร์" เพื่อแชร์รูปลง Story ได้ลื่นที่สุด
+      </div>
+
+      <button type="button" id="btn-share-ig" data-action="share-ig" disabled class="w-full py-3 rounded-2xl ig-grad text-white font-bold text-sm flex items-center justify-center gap-2 mb-2.5">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        แชร์ลง Instagram Story
+      </button>
+
+      <div class="grid grid-cols-4 gap-2">
+        <button type="button" data-action="share-fb" class="py-2.5 rounded-xl glass-btn flex flex-col items-center gap-1 text-[10px] text-slate-200">
+          <span class="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="#fff" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></span>Facebook
+        </button>
+        <button type="button" data-action="share-line" class="py-2.5 rounded-xl glass-btn flex flex-col items-center gap-1 text-[10px] text-slate-200">
+          <span class="w-9 h-9 rounded-full bg-[#06C755] flex items-center justify-center text-[9px] font-bold text-white font-display">LINE</span>LINE
+        </button>
+        <button type="button" data-action="share-x" class="py-2.5 rounded-xl glass-btn flex flex-col items-center gap-1 text-[10px] text-slate-200">
+          <span class="w-9 h-9 rounded-full bg-black border border-white/20 flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="#fff" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></span>X
+        </button>
+        <button type="button" data-action="copy-link" class="py-2.5 rounded-xl glass-btn flex flex-col items-center gap-1 text-[10px] text-slate-200">
+          <span class="w-9 h-9 rounded-full bg-slate-700 flex items-center justify-center"><svg class="w-4 h-4" fill="none" stroke="#fff" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>คัดลอก
+        </button>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mt-2">
+        <button type="button" id="btn-save-image" data-action="save-image" disabled class="py-2.5 rounded-xl glass-btn text-xs text-slate-200">⬇️ บันทึกรูป</button>
+        <button type="button" id="btn-share-more" data-action="share-more" class="py-2.5 rounded-xl glass-btn text-xs text-slate-200">⋯ แชร์ช่องทางอื่น</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-account" hidden class="modal fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="account-title">
+    <div class="glass-app-frame w-full max-w-md p-6 rounded-3xl border border-emerald-500/40 relative fade-in-scale max-h-[90dvh] overflow-y-auto">
+      <button type="button" data-action="close-modal" aria-label="ปิด" class="absolute top-3 right-3 text-slate-400 hover:text-white p-2 text-lg">✕</button>
+      <div class="flex items-center gap-3 mb-4">
+        <svg class="w-8 h-8 rounded" aria-hidden="true"><use href="#i-trinity"/></svg>
+        <div>
+          <h3 id="account-title" class="text-sm font-bold text-white font-display">เปิดบัญชีกับ Trinity Securities</h3>
+          <p class="text-[10px] text-emerald-400 font-mono font-bold">e-Account Opening · NDID</p>
+        </div>
+      </div>
+      <div class="bg-slate-900/90 p-3 rounded-xl border border-white/10 mb-4 flex items-center gap-3">
+        <div id="account-avatar" class="w-14 h-14 shrink-0" aria-hidden="true"></div>
+        <div class="text-xs min-w-0">
+          <p class="text-slate-400">Identity ของคุณ</p>
+          <p id="account-profile" class="text-emerald-400 font-semibold leading-snug"></p>
+          <p class="text-sky-400 font-mono text-[10px] mt-0.5">ยืนยันตัวตนผ่าน NDID / ThaiID</p>
+        </div>
+      </div>
+      <p class="text-xs text-slate-300 mb-3 leading-relaxed">ระบบจะพาคุณไปยังหน้าเปิดบัญชีของ Trinity ซึ่งคุณจะต้องทำ <b class="text-white">แบบประเมินความเหมาะสม (Suitability Test)</b> อย่างเป็นทางการ ผลจาก TriSpark ใช้เป็นแนวทางเบื้องต้นเท่านั้น</p>
+      <label class="flex items-start gap-2.5 text-[11px] text-slate-300 mb-4 cursor-pointer">
+        <input id="account-consent" type="checkbox" class="mt-0.5 w-4 h-4 accent-emerald-500 shrink-0" />
+        <span>ฉันเข้าใจว่าการลงทุนมีความเสี่ยง และผลลัพธ์นี้ไม่ใช่คำแนะนำการลงทุน</span>
+      </label>
+      <button type="button" data-action="go-account" id="btn-go-account" disabled class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-sm transition-all">ไปหน้าเปิดบัญชี 🔐</button>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-slate-900 text-white border border-emerald-500/50 px-4 py-2.5 rounded-2xl text-xs z-[60] opacity-0 pointer-events-none transition-opacity duration-300 shadow-xl max-w-[90vw] text-center"></div>
+
+  <script>
+  (() => {
+    'use strict';
+
+    const CONFIG = {
+      ACCOUNT_URL: 'https://www.trinitythai.com/',
+      APP_URL: location.origin + location.pathname,
+      SHARE_PAGE_URL: '',
+      UTM_CAMPAIGN: 'genz_investment_identity',
+      STORAGE_KEY: 'trispark:v3',
+      REACT_MS: 3800,
+      REDUCED_MOTION: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    };
+    const UA = navigator.userAgent || '';
+    const IS_MOBILE = /Android|iPhone|iPad|iPod/i.test(UA);
+    const IN_APP = /FBAN|FBAV|FB_IAB|Instagram|Line\/|TikTok/i.test(UA);
+
+    const SV = 'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"';
+    const ART = {
+      surfer: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#22D3EE" fill-opacity=".12"/><circle cx="100" cy="100" r="70" fill="#22D3EE" fill-opacity=".08"/><path d="M8 184 L40 162 L64 172 L96 140 L122 150 L152 112 L192 90 V200 H8 Z" fill="#10B981" fill-opacity=".22"/><path d="M8 184 L40 162 L64 172 L96 140 L122 150 L152 112 L192 90" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M180 86 L192 90 L186 102" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M94 102 L88 126 M108 102 L114 117" stroke="#1E293B" stroke-width="9" stroke-linecap="round"/><ellipse cx="102" cy="124" rx="50" ry="9" transform="rotate(-20 102 124)" fill="#F5B718" stroke="#fff" stroke-width="2"/><line x1="60" y1="139" x2="144" y2="109" stroke="#E11925" stroke-width="2.5"/><path d="M86 80 L62 68 M114 80 L140 64" stroke="#FCD9B6" stroke-width="8" stroke-linecap="round"/><rect x="82" y="70" width="36" height="36" rx="12" fill="#0EA5E9"/><path d="M102 78 L94 90 H101 L97 99 L107 86 H100 Z" fill="#F5B718"/><circle cx="100" cy="50" r="20" fill="#FCD9B6"/><path d="M80 48 Q80 26 102 28 Q122 30 120 48 L114 40 L108 46 L102 36 L95 44 L88 37 Z" fill="#1E293B"/><rect x="83" y="44" width="34" height="11" rx="5.5" fill="#22D3EE" fill-opacity=".9" stroke="#fff" stroke-width="1.5"/><rect x="87" y="46.5" width="10" height="3" rx="1.5" fill="#fff" fill-opacity=".8"/><path d="M93 61 Q100 66 107 61" stroke="#1E293B" stroke-width="2.5" fill="none" stroke-linecap="round"/><text x="146" y="44" font-size="13" font-weight="700" fill="#10B981" font-family="sans-serif">+30%</text><circle cx="40" cy="44" r="4" fill="#E11925"/><circle cx="54" cy="30" r="2.5" fill="#F5B718"/></svg>`,
+      fortress: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#F5B718" fill-opacity=".12"/><path d="M14 30 L34 44 L48 38 L66 62" fill="none" stroke="#E11925" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 60 L67 64 L66 52" fill="none" stroke="#E11925" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 74 L40 68 M58 74 L58 66 M70 78 L76 72" stroke="#F5B718" stroke-width="3" stroke-linecap="round"/><rect x="82" y="148" width="14" height="26" rx="5" fill="#B45309"/><rect x="104" y="148" width="14" height="26" rx="5" fill="#B45309"/><rect x="70" y="98" width="60" height="58" rx="16" fill="#F5B718" stroke="#B45309" stroke-width="3"/><rect x="70" y="132" width="60" height="7" fill="#B45309"/><polygon points="100,108 112,126 88,126" fill="#E11925"/><path d="M128 112 L148 124" stroke="#F5B718" stroke-width="12" stroke-linecap="round"/><circle cx="156" cy="128" r="14" fill="#FDE68A" stroke="#B45309" stroke-width="3"/><text x="156" y="133" text-anchor="middle" font-size="15" font-weight="700" fill="#B45309" font-family="sans-serif">฿</text><path d="M100 44 Q114 22 132 30 Q116 34 106 48 Z" fill="#E11925"/><circle cx="100" cy="72" r="28" fill="#FBBF24" stroke="#B45309" stroke-width="3"/><path d="M100 45 V62" stroke="#B45309" stroke-width="3"/><rect x="80" y="64" width="40" height="14" rx="7" fill="#1E293B"/><circle cx="92" cy="71" r="3" fill="#22D3EE"/><circle cx="108" cy="71" r="3" fill="#22D3EE"/><path d="M92 86 H108" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/><path d="M30 92 Q56 82 82 92 V126 Q82 150 56 164 Q30 150 30 126 Z" fill="#1E3A8A" stroke="#F5B718" stroke-width="4"/><polygon points="56,104 70,134 42,134" fill="#F5B718"/><path d="M56 114 L49 128 H63 Z" fill="#E11925"/><path d="M38 98 Q46 94 54 93" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`,
+      diver: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#3B82F6" fill-opacity=".14"/><g fill="none" stroke="#7DD3FC" stroke-width="2"><circle cx="34" cy="56" r="7"/><circle cx="48" cy="32" r="4"/><circle cx="162" cy="40" r="5"/><circle cx="172" cy="22" r="3"/></g><rect x="52" y="110" width="14" height="44" rx="7" fill="#F5B718"/><ellipse cx="96" cy="142" rx="42" ry="38" fill="#0F766E"/><rect x="80" y="126" width="32" height="22" rx="6" fill="#134E4A" stroke="#5EEAD4" stroke-width="2"/><circle cx="96" cy="137" r="6" fill="none" stroke="#5EEAD4" stroke-width="2"/><path d="M96 137 L99 134" stroke="#F5B718" stroke-width="2"/><polygon points="70,62 72,40 88,56" fill="#A16207"/><polygon points="122,62 120,40 104,56" fill="#A16207"/><circle cx="96" cy="80" r="30" fill="#A16207"/><ellipse cx="96" cy="84" rx="24" ry="20" fill="#FDE68A"/><circle cx="85" cy="82" r="10" fill="#fff"/><circle cx="107" cy="82" r="10" fill="#fff"/><circle cx="87" cy="83" r="5" fill="#1E293B"/><circle cx="109" cy="83" r="5" fill="#1E293B"/><circle cx="89" cy="81" r="1.6" fill="#fff"/><circle cx="111" cy="81" r="1.6" fill="#fff"/><polygon points="91,92 101,92 96,101" fill="#F59E0B"/><circle cx="96" cy="78" r="40" fill="#7DD3FC" fill-opacity=".16" stroke="#CBD5E1" stroke-width="6"/><path d="M70 60 Q78 48 92 44" stroke="#fff" stroke-opacity=".7" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="56" cy="78" r="4" fill="#94A3B8"/><circle cx="136" cy="78" r="4" fill="#94A3B8"/><g transform="rotate(8 150 137)"><rect x="128" y="108" width="44" height="58" rx="4" fill="#F8FAFC"/><rect x="134" y="115" width="32" height="5" rx="2" fill="#E11925"/><path d="M134 126 H166 M134 131 H158" stroke="#94A3B8" stroke-width="2"/><rect x="135" y="146" width="6" height="12" fill="#10B981"/><rect x="144" y="140" width="6" height="18" fill="#10B981"/><rect x="153" y="134" width="6" height="24" fill="#10B981"/></g><ellipse cx="122" cy="148" rx="9" ry="15" transform="rotate(-30 122 148)" fill="#0F766E"/><circle cx="140" cy="126" r="15" fill="#7DD3FC" fill-opacity=".3" stroke="#F5B718" stroke-width="5"/><path d="M129 137 L118 148" stroke="#F5B718" stroke-width="6" stroke-linecap="round"/></svg>`,
+      zen: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#10B981" fill-opacity=".12"/><circle cx="100" cy="100" r="80" fill="none" stroke="#10B981" stroke-opacity=".35" stroke-width="2" stroke-dasharray="4 6"/><g fill="#10B981"><rect x="16" y="160" width="10" height="16" rx="2"/><rect x="30" y="152" width="10" height="24" rx="2"/><rect x="160" y="146" width="10" height="30" rx="2"/><rect x="174" y="138" width="10" height="38" rx="2"/></g><circle cx="32" cy="104" r="10" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><circle cx="168" cy="104" r="10" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><ellipse cx="100" cy="170" rx="58" ry="12" fill="#0F766E"/><ellipse cx="100" cy="138" rx="50" ry="32" fill="#9C6B3F"/><ellipse cx="78" cy="162" rx="22" ry="8" fill="#8B5A2B"/><ellipse cx="122" cy="162" rx="22" ry="8" fill="#8B5A2B"/><ellipse cx="100" cy="142" rx="28" ry="20" fill="#B8865A"/><circle cx="90" cy="152" r="7" fill="#8B5A2B"/><circle cx="110" cy="152" r="7" fill="#8B5A2B"/><circle cx="70" cy="66" r="8" fill="#7A4F27"/><circle cx="130" cy="66" r="8" fill="#7A4F27"/><rect x="64" y="60" width="72" height="58" rx="28" fill="#B07D4B"/><rect x="78" y="90" width="44" height="26" rx="13" fill="#8B5A2B"/><ellipse cx="92" cy="98" rx="3" ry="2" fill="#3B2412"/><ellipse cx="108" cy="98" rx="3" ry="2" fill="#3B2412"/><path d="M94 108 Q100 112 106 108" stroke="#3B2412" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M78 80 Q84 85 90 80 M110 80 Q116 85 122 80" stroke="#3B2412" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="73" cy="90" rx="5" ry="3" fill="#F472B6" fill-opacity=".5"/><ellipse cx="127" cy="90" rx="5" ry="3" fill="#F472B6" fill-opacity=".5"/><circle cx="100" cy="52" r="11" fill="#F5B718"/><ellipse cx="107" cy="42" rx="7" ry="3" transform="rotate(-30 107 42)" fill="#10B981"/></svg>`,
+      pioneer: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#8B5CF6" fill-opacity=".16"/><g fill="#fff"><circle cx="30" cy="40" r="2"/><circle cx="56" cy="22" r="1.5"/><circle cx="172" cy="150" r="2"/><circle cx="24" cy="132" r="1.5"/><circle cx="60" cy="178" r="1.5"/><circle cx="150" cy="30" r="1.5"/></g><circle cx="40" cy="74" r="12" fill="#F97316"/><ellipse cx="40" cy="74" rx="21" ry="5" transform="rotate(-20 40 74)" fill="none" stroke="#FDE68A" stroke-width="2"/><rect x="66" y="104" width="68" height="50" rx="14" fill="#94A3B8"/><rect x="80" y="150" width="16" height="26" rx="7" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/><rect x="104" y="150" width="16" height="26" rx="7" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/><rect x="72" y="104" width="56" height="52" rx="18" fill="#F1F5F9" stroke="#94A3B8" stroke-width="3"/><rect x="88" y="118" width="24" height="16" rx="4" fill="#0F172A"/><circle cx="94" cy="126" r="2.5" fill="#10B981"/><circle cx="100" cy="126" r="2.5" fill="#F5B718"/><circle cx="106" cy="126" r="2.5" fill="#E11925"/><path d="M76 116 L62 136" stroke="#F1F5F9" stroke-width="12" stroke-linecap="round"/><path d="M124 114 L144 98" stroke="#F1F5F9" stroke-width="12" stroke-linecap="round"/><path d="M100 42 V30" stroke="#94A3B8" stroke-width="3"/><circle cx="100" cy="28" r="4" fill="#F5B718"/><circle cx="100" cy="74" r="32" fill="#F1F5F9" stroke="#94A3B8" stroke-width="3"/><ellipse cx="100" cy="77" rx="23" ry="19" fill="#0F172A"/><circle cx="92" cy="76" r="3.5" fill="#22D3EE"/><circle cx="108" cy="76" r="3.5" fill="#22D3EE"/><path d="M94 85 Q100 89 106 85" stroke="#22D3EE" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M84 66 Q90 60 98 60" stroke="#fff" stroke-opacity=".6" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="154" cy="82" r="27" fill="#10B981" fill-opacity=".15"/><circle cx="154" cy="82" r="17" fill="#10B981" fill-opacity=".45" stroke="#6EE7B7" stroke-width="3"/><ellipse cx="154" cy="82" rx="25" ry="7" transform="rotate(-25 154 82)" fill="none" stroke="#F5B718" stroke-width="1.5"/><text x="154" y="87" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="sans-serif">AI</text><circle cx="145" cy="97" r="7" fill="#CBD5E1"/></svg>`,
+      chaos: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#F97316" fill-opacity=".14"/><path d="M30 192 Q36 160 50 170 Q52 146 70 160 Q78 136 96 156 Q108 132 120 158 Q138 140 140 166 Q156 152 160 176 Q168 168 172 192 Z" fill="#E11925" fill-opacity=".55"/><path d="M50 192 Q60 170 72 178 Q84 160 100 176 Q114 162 124 180 Q140 170 150 192 Z" fill="#F5B718" fill-opacity=".75"/><path d="M74 160 Q28 152 32 112 Q42 134 66 140 Z" fill="#F97316"/><circle cx="34" cy="116" r="8" fill="#FFF7ED"/><ellipse cx="100" cy="150" rx="30" ry="24" fill="#F97316"/><ellipse cx="100" cy="156" rx="16" ry="15" fill="#FFF7ED"/><polygon points="62,74 64,32 92,60" fill="#F97316"/><polygon points="138,74 136,32 108,60" fill="#F97316"/><polygon points="68,66 69,44 84,60" fill="#7C2D12"/><polygon points="132,66 131,44 116,60" fill="#7C2D12"/><path d="M58 72 Q100 50 142 72 L130 112 Q100 134 70 112 Z" fill="#F97316"/><path d="M66 96 Q84 104 100 100 Q116 104 134 96 L128 112 Q100 134 72 112 Z" fill="#FFF7ED"/><path d="M72 74 L90 79 M128 74 L110 79" stroke="#7C2D12" stroke-width="3" stroke-linecap="round"/><path d="M74 86 Q83 79 92 87 M108 87 Q117 79 126 86" stroke="#1E293B" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="102" rx="5" ry="3.5" fill="#1E293B"/><path d="M86 110 Q100 122 114 110 Z" fill="#fff" stroke="#1E293B" stroke-width="3" stroke-linejoin="round"/><path d="M56 80 Q100 28 144 80" stroke="#1E293B" stroke-width="7" fill="none" stroke-linecap="round"/><rect x="46" y="72" width="16" height="28" rx="7" fill="#E11925" stroke="#1E293B" stroke-width="2"/><rect x="138" y="72" width="16" height="28" rx="7" fill="#E11925" stroke="#1E293B" stroke-width="2"/><path d="M128 150 L160 112" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round"/><ellipse cx="164" cy="106" rx="9" ry="13" transform="rotate(40 164 106)" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/><circle cx="164" cy="105" r="5" fill="#F5B718"/><circle cx="128" cy="150" r="7" fill="#F97316" stroke="#7C2D12" stroke-width="2"/></svg>`,
+      social: `<svg ${SV}><circle cx="100" cy="100" r="92" fill="#EC4899" fill-opacity=".12"/><rect x="16" y="28" width="42" height="24" rx="12" fill="#fff" fill-opacity=".92"/><path d="M28 52 L26 61 L37 52 Z" fill="#fff" fill-opacity=".92"/><g fill="#64748B"><circle cx="29" cy="40" r="2.5"/><circle cx="37" cy="40" r="2.5"/><circle cx="45" cy="40" r="2.5"/></g><path d="M160 40 C160 34 168 32 170 38 C172 32 180 34 180 40 C180 46 170 52 170 52 C170 52 160 46 160 40 Z" fill="#EC4899"/><path d="M138 162 Q178 158 170 120" stroke="#9CA3AF" stroke-width="10" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="148" rx="42" ry="32" fill="#9CA3AF"/><ellipse cx="100" cy="152" rx="24" ry="20" fill="#F3F4F6"/><polygon points="68,74 70,40 94,62" fill="#9CA3AF"/><polygon points="132,74 130,40 106,62" fill="#9CA3AF"/><polygon points="73,66 74,50 87,62" fill="#F9A8D4"/><polygon points="127,66 126,50 113,62" fill="#F9A8D4"/><ellipse cx="100" cy="88" rx="36" ry="32" fill="#9CA3AF"/><path d="M92 58 V68 M100 56 V68 M108 58 V68" stroke="#6B7280" stroke-width="3" stroke-linecap="round"/><ellipse cx="100" cy="102" rx="16" ry="11" fill="#F3F4F6"/><circle cx="86" cy="88" r="6" fill="#1E293B"/><circle cx="114" cy="88" r="6" fill="#1E293B"/><circle cx="88" cy="86" r="2" fill="#fff"/><circle cx="116" cy="86" r="2" fill="#fff"/><circle cx="86" cy="88" r="10" fill="none" stroke="#1E293B" stroke-width="2.5"/><circle cx="114" cy="88" r="10" fill="none" stroke="#1E293B" stroke-width="2.5"/><path d="M96 88 H104" stroke="#1E293B" stroke-width="2.5"/><path d="M96 97 H104 L100 101 Z" fill="#F472B6"/><path d="M93 104 Q96.5 108 100 104 Q103.5 108 107 104" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M70 98 L54 94 M70 103 L54 105 M130 98 L146 94 M130 103 L146 105" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="74" cy="100" rx="4" ry="2.5" fill="#F472B6" fill-opacity=".6"/><ellipse cx="126" cy="100" rx="4" ry="2.5" fill="#F472B6" fill-opacity=".6"/><rect x="56" y="122" width="56" height="40" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/><rect x="56" y="122" width="56" height="11" rx="5" fill="#E11925"/><text x="84" y="130.5" text-anchor="middle" font-size="7" font-weight="700" fill="#fff" font-family="sans-serif">TRINITY</text><path d="M62 141 H98 M62 148 H90 M62 155 H94" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/><path d="M98 156 L103 149 L108 152" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="152" r="7" fill="#9CA3AF"/><path d="M120 128 H146 L142 158 Q141 162 137 162 H129 Q125 162 124 158 Z" fill="#fff" stroke="#CBD5E1" stroke-width="2"/><rect x="122" y="139" width="22" height="8" fill="#10B981"/><path d="M146 134 Q157 137 152 147 Q150 150 144 150" stroke="#CBD5E1" stroke-width="3" fill="none"/><ellipse cx="133" cy="129" rx="12" ry="3" fill="#78350F"/><path d="M128 120 Q124 114 128 108 M137 120 Q133 112 137 104" stroke="#CBD5E1" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="122" cy="150" r="7" fill="#9CA3AF"/></svg>`
+    };
+
+    const SS = 'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%"';
+    const SCENES = {
+      night: `<svg ${SS}><rect x="208" y="14" width="88" height="66" rx="6" fill="#0B1424" stroke="#334155" stroke-width="3"/><path d="M252 14 V80 M208 47 H296" stroke="#334155" stroke-width="2"/><circle cx="278" cy="31" r="9" fill="#FDE68A"/><circle cx="282" cy="28" r="8" fill="#0B1424"/><g fill="#fff" class="sc-blink"><circle cx="224" cy="28" r="1.3"/><circle cx="236" cy="64" r="1"/><circle cx="272" cy="66" r="1.3"/></g><path d="M10 180 Q30 128 104 134 Q176 138 214 180 Z" fill="#1E293B"/><ellipse cx="140" cy="112" rx="52" ry="44" fill="#22D3EE" fill-opacity=".12"/><circle cx="96" cy="106" r="22" fill="#FCD9B6"/><path d="M74 102 Q76 80 98 82 Q120 84 118 104 Q110 92 96 94 Q84 94 74 102Z" fill="#1E293B"/><circle cx="90" cy="108" r="2.5" fill="#1E293B"/><circle cx="104" cy="108" r="2.5" fill="#1E293B"/><path d="M92 118 Q97 115 102 118" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="126" y="86" width="38" height="66" rx="7" fill="#0F172A" stroke="#22D3EE" stroke-width="2"/><rect x="131" y="93" width="28" height="16" rx="3" fill="#10B981" fill-opacity=".25"/><text x="145" y="104" text-anchor="middle" font-size="7" font-weight="700" fill="#6EE7B7" class="g">+30%</text><rect x="131" y="113" width="28" height="16" rx="3" fill="#10B981" fill-opacity=".25"/><text x="145" y="124" text-anchor="middle" font-size="7" font-weight="700" fill="#6EE7B7" class="g">+12%</text><rect x="131" y="133" width="28" height="12" rx="3" fill="#334155"/><g class="sc-float"><circle cx="76" cy="78" r="3" fill="#fff" fill-opacity=".85"/><circle cx="64" cy="64" r="5" fill="#fff" fill-opacity=".85"/><rect x="10" y="16" width="76" height="32" rx="16" fill="#fff"/><text x="48" y="37" text-anchor="middle" font-size="12" font-weight="600" fill="#0F172A">เริ่มยังไง?</text></g><text x="252" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#94A3B8" class="g">01:07 AM</text></svg>`,
+      save: `<svg ${SS}><g transform="translate(30 50)"><path d="M0 12 H36 L31 70 H5 Z" fill="#FDE68A" fill-opacity=".35" stroke="#F5B718" stroke-width="2"/><rect x="-3" y="6" width="42" height="8" rx="3" fill="#F5B718"/><path d="M22 6 L28 -12" stroke="#E11925" stroke-width="4" stroke-linecap="round"/><g fill="#3B2412"><circle cx="10" cy="62" r="3"/><circle cx="18" cy="64" r="3"/><circle cx="26" cy="62" r="3"/><circle cx="14" cy="56" r="3"/><circle cx="22" cy="56" r="3"/></g><path d="M-6 -6 L42 78 M42 -6 L-6 78" stroke="#E11925" stroke-width="5" stroke-linecap="round"/></g><text x="48" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#FCA5A5" class="g">x40</text><text x="48" y="166" text-anchor="middle" font-size="8" fill="#94A3B8">แก้วที่งดไป</text><g class="sc-drop"><circle cx="162" cy="40" r="10" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><text x="162" y="44.5" text-anchor="middle" font-size="11" font-weight="700" fill="#B45309">฿</text></g><polygon points="128,84 136,62 148,84" fill="#EC4899"/><ellipse cx="162" cy="118" rx="58" ry="42" fill="#F472B6"/><path d="M104 112 q-12 -4 -10 -14 q2 -6 8 -2" stroke="#EC4899" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="126" y="150" width="14" height="18" rx="4" fill="#EC4899"/><rect x="184" y="150" width="14" height="18" rx="4" fill="#EC4899"/><rect x="146" y="78" width="32" height="6" rx="3" fill="#831843"/><circle cx="190" cy="104" r="4" fill="#1E293B"/><ellipse cx="216" cy="118" rx="14" ry="12" fill="#F9A8D4"/><circle cx="211" cy="118" r="2.5" fill="#831843"/><circle cx="221" cy="118" r="2.5" fill="#831843"/><text x="156" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#fff" class="g">฿10,000</text><g class="sc-pop"><rect x="246" y="36" width="56" height="58" rx="10" fill="#0F172A" stroke="#334155" stroke-width="2"/><rect x="246" y="36" width="56" height="16" rx="8" fill="#10B981"/><rect x="246" y="46" width="56" height="6" fill="#10B981"/><text x="274" y="80" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" class="g">3</text><text x="274" y="110" text-anchor="middle" font-size="9" fill="#94A3B8">เดือนแห่งความอดทน</text></g><g class="sc-blink" fill="#F5B718"><path d="M262 140 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M290 128 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g></svg>`,
+      journey: `<svg ${SS}><circle cx="54" cy="58" r="22" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><text x="50" y="65" text-anchor="middle" font-size="20" font-weight="700" fill="#B45309">฿</text><circle cx="73" cy="44" r="10" fill="#0B1424"/><circle cx="71" cy="57" r="6" fill="#0B1424"/><text x="50" y="98" text-anchor="middle" font-size="9" fill="#FCA5A5">เงินเฟ้อแอบกินทุกวัน</text><path d="M26 156 C 90 158, 86 112, 146 112 S 206 74, 246 70" fill="none" stroke="#10B981" stroke-width="4" stroke-dasharray="7 7" stroke-linecap="round"/><circle cx="26" cy="156" r="6" fill="#10B981"/><circle cx="146" cy="112" r="5" fill="#F5B718"/><text x="30" y="176" text-anchor="middle" font-size="9" fill="#CBD5E1">เดือนที่ 1</text><text x="146" y="134" text-anchor="middle" font-size="9" fill="#CBD5E1">7 สถานการณ์</text><g class="sc-float"><use href="#i-spark" x="230" y="6" width="80" height="80"/></g><text x="270" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#6EE7B7">ตัวตนของคุณ</text></svg>`,
+      payday: `<svg ${SS}><g class="sc-float"><rect x="30" y="12" width="92" height="158" rx="16" fill="#0B1424" stroke="#334155" stroke-width="3"/><rect x="62" y="18" width="28" height="5" rx="2.5" fill="#334155"/><text x="42" y="40" font-size="8" fill="#94A3B8">บัญชีออมทรัพย์</text><text x="76" y="70" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" class="g">฿10,000</text><rect x="40" y="78" width="72" height="14" rx="7" fill="#10B981" fill-opacity=".2"/><text x="76" y="88" text-anchor="middle" font-size="7.5" fill="#6EE7B7">เงินเก็บก้อนแรก</text><g fill="#10B981"><rect x="44" y="132" width="9" height="20" rx="2"/><rect x="58" y="124" width="9" height="28" rx="2"/><rect x="72" y="116" width="9" height="36" rx="2"/><rect x="86" y="106" width="9" height="46" rx="2"/></g><rect x="100" y="98" width="9" height="54" rx="2" fill="#F5B718"/></g><g class="sc-pop"><rect x="140" y="22" width="160" height="104" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/><rect x="152" y="34" width="50" height="14" rx="4" fill="#E11925" class="sc-blink"/><text x="177" y="44" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff" class="g">BREAKING</text><rect x="154" y="60" width="40" height="40" rx="8" fill="#06101E" stroke="#10B981" stroke-width="2.5"/><text x="174" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="#10B981" class="g">AI</text><path d="M164 55 V60 M174 55 V60 M184 55 V60 M164 100 V105 M174 100 V105 M184 100 V105" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><text x="204" y="70" font-size="9.5" font-weight="600" fill="#fff">บริษัท AI ระดับโลก</text><text x="204" y="84" font-size="9.5" fill="#CBD5E1">เตรียมเปิดตัว</text><text x="204" y="98" font-size="9.5" fill="#CBD5E1">นวัตกรรมใหม่!</text><text x="152" y="118" font-size="7" fill="#64748B">อัปเดตเมื่อ 2 นาทีที่แล้ว</text></g><g class="sc-float"><circle cx="232" cy="152" r="12" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><text x="232" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#B45309">฿</text><circle cx="264" cy="146" r="9" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/><circle cx="290" cy="158" r="7" fill="#FDE68A" stroke="#F5B718" stroke-width="3"/></g></svg>`,
+      crash: `<svg ${SS}><rect x="22" y="14" width="180" height="122" rx="12" fill="#0B1424" stroke="#334155" stroke-width="3"/><rect x="100" y="136" width="24" height="16" fill="#334155"/><rect x="80" y="150" width="64" height="8" rx="4" fill="#334155"/><text x="34" y="32" font-size="8" fill="#94A3B8" class="g">MARKET INDEX</text><text x="190" y="33" text-anchor="end" font-size="12" font-weight="700" fill="#F87171" class="g sc-blink">-5.00%</text><path d="M34 60 H190 M34 85 H190 M34 110 H190" stroke="#1E293B" stroke-width="1"/><g stroke-width="1.5"><line x1="40" y1="52" x2="40" y2="76" stroke="#10B981"/><rect x="35.5" y="58" width="9" height="14" fill="#10B981"/><line x1="56" y1="46" x2="56" y2="68" stroke="#10B981"/><rect x="51.5" y="52" width="9" height="12" fill="#10B981"/><line x1="72" y1="50" x2="72" y2="74" stroke="#EF4444"/><rect x="67.5" y="54" width="9" height="16" fill="#EF4444"/><line x1="88" y1="60" x2="88" y2="88" stroke="#EF4444"/><rect x="83.5" y="66" width="9" height="18" fill="#EF4444"/><line x1="104" y1="70" x2="104" y2="86" stroke="#10B981"/><rect x="99.5" y="74" width="9" height="8" fill="#10B981"/><line x1="120" y1="72" x2="120" y2="102" stroke="#EF4444"/><rect x="115.5" y="78" width="9" height="20" fill="#EF4444"/><line x1="136" y1="88" x2="136" y2="112" stroke="#EF4444"/><rect x="131.5" y="94" width="9" height="14" fill="#EF4444"/><line x1="152" y1="98" x2="152" y2="124" stroke="#EF4444"/><rect x="147.5" y="104" width="9" height="16" fill="#EF4444"/><line x1="168" y1="106" x2="168" y2="128" stroke="#EF4444"/><rect x="163.5" y="112" width="9" height="14" fill="#EF4444"/></g><g class="sc-pop"><rect x="214" y="30" width="96" height="70" rx="12" fill="#1E293B" stroke="#E11925" stroke-width="2"/><circle cx="230" cy="46" r="7" fill="#E11925"/><text x="230" y="49.5" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" class="g">!</text><text x="242" y="49" font-size="8" font-weight="600" fill="#fff">ข่าวด่วน</text><text x="224" y="68" font-size="8" fill="#CBD5E1">พอร์ตของคุณ</text><text x="224" y="88" font-size="15" font-weight="700" fill="#fff" class="g">฿9,500</text><text x="302" y="88" text-anchor="end" font-size="8" fill="#F87171" class="g">-500</text></g><g transform="translate(262 140)"><circle r="20" fill="#FCD9B6"/><circle cx="-7" cy="-3" r="3.5" fill="#1E293B"/><circle cx="7" cy="-3" r="3.5" fill="#1E293B"/><ellipse cy="9" rx="4" ry="5" fill="#1E293B"/><path d="M15 -16 q5 7 0 10 q-5 -3 0 -10Z" fill="#7DD3FC"/></g></svg>`,
+      chat: `<svg ${SS}><g class="sc-float"><path d="M34 72 Q34 42 44 28 Q54 42 54 72 Z" fill="#E2E8F0"/><circle cx="44" cy="50" r="5" fill="#0284C7"/><path d="M34 62 L26 78 L34 74 Z M54 62 L62 78 L54 74 Z" fill="#E11925"/><path d="M38 74 Q44 94 50 74 Z" fill="#F97316"/></g><text x="44" y="114" text-anchor="middle" font-size="13" font-weight="700" fill="#F5B718" class="g sc-blink">FOMO</text><rect x="70" y="8" width="120" height="166" rx="16" fill="#0B1424" stroke="#334155" stroke-width="3"/><rect x="76" y="16" width="108" height="20" rx="6" fill="#06C755" fill-opacity=".2"/><text x="84" y="29.5" font-size="8" font-weight="600" fill="#86EFAC">แก๊งมหาลัย (8)</text><circle cx="84" cy="52" r="7" fill="#F472B6"/><rect x="95" y="42" width="82" height="46" rx="8" fill="#1E293B"/><rect x="100" y="47" width="72" height="36" rx="5" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/><text x="136" y="63" text-anchor="middle" font-size="13" font-weight="700" fill="#34D399" class="g">+30%</text><path d="M104 78 L116 74 L126 76 L140 71 L166 66" stroke="#10B981" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="84" cy="104" r="7" fill="#60A5FA"/><rect x="95" y="96" width="74" height="18" rx="8" fill="#1E293B"/><text x="101" y="108" font-size="8" fill="#fff">รีบซื้อด่วน!!</text><circle cx="84" cy="132" r="7" fill="#FBBF24"/><rect x="95" y="124" width="74" height="18" rx="8" fill="#1E293B"/><text x="101" y="136" font-size="8" fill="#fff">ไปดวงจันทร์แน่!</text><rect x="95" y="150" width="32" height="14" rx="7" fill="#1E293B"/><g fill="#94A3B8" class="sc-blink"><circle cx="104" cy="157" r="2"/><circle cx="111" cy="157" r="2"/><circle cx="118" cy="157" r="2"/></g><g class="sc-pop"><circle cx="188" cy="12" r="12" fill="#E11925"/><text x="188" y="15.5" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" class="g">99+</text></g><g class="sc-float"><path d="M212 120 Q216 100 236 98 H270 Q284 100 296 116 L306 120 V134 H212 Z" fill="#10B981"/><path d="M232 104 H266 Q276 106 284 116 H226 Z" fill="#0F172A"/><circle cx="232" cy="136" r="9" fill="#1E293B" stroke="#94A3B8" stroke-width="3"/><circle cx="286" cy="136" r="9" fill="#1E293B" stroke="#94A3B8" stroke-width="3"/><path d="M260 118 L252 128 H258 L254 136 L264 124 H258 Z" fill="#F5B718"/></g><text x="258" y="166" text-anchor="middle" font-size="9" fill="#94A3B8">หุ้นรถยนต์ไฟฟ้า</text></svg>`,
+      research: `<svg ${SS}><g class="sc-float"><rect x="26" y="14" width="118" height="152" rx="10" fill="#F8FAFC"/><path d="M26 24 Q26 14 36 14 H134 Q144 14 144 24 V40 H26 Z" fill="#E11925"/><text x="38" y="31" font-size="9" font-weight="700" fill="#fff" class="g">TRINITY RESEARCH</text><text x="38" y="58" font-size="9" font-weight="700" fill="#0F172A">กลุ่มโครงสร้างพื้นฐาน</text><path d="M38 70 H130 M38 80 H120 M38 90 H126" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/><rect x="38" y="100" width="94" height="44" rx="6" fill="#F1F5F9"/><path d="M44 136 L60 128 L74 132 L90 118 L106 112 L126 104" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="158" font-size="7.5" fill="#64748B">มุมมอง 3 ปี: เติบโตสม่ำเสมอ</text></g><g class="sc-pop"><g transform="rotate(-14 136 118)"><rect x="106" y="104" width="60" height="26" rx="6" fill="#F8FAFC" fill-opacity=".85" stroke="#10B981" stroke-width="3"/><text x="136" y="122" text-anchor="middle" font-size="12" font-weight="700" fill="#10B981" class="g">TOP PICK</text></g></g><g class="sc-blink"><circle cx="186" cy="30" r="12" fill="#10B981"/><path d="M181 25 q0 10 10 10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></g><text x="204" y="34" font-size="9" fill="#6EE7B7">สายตรงจากนักวิเคราะห์</text><path d="M176 92 L206 78 L226 84 L250 58" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="5 5"/><path d="M240 56 L251 57 L249 68" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M188 122 V140 M208 110 V140 M228 106 V140 M248 110 V140 M268 122 V140" stroke="#38BDF8" stroke-width="1.5"/><path d="M168 142 Q228 70 288 142" fill="none" stroke="#0284C7" stroke-width="5"/><rect x="160" y="140" width="146" height="6" fill="#334155"/><path d="M294 146 V62 M262 64 H310 M294 62 L276 64" stroke="#F5B718" stroke-width="3"/><path d="M270 64 V84" stroke="#F5B718" stroke-width="1.5"/><rect x="264" y="84" width="12" height="8" fill="#F5B718"/></svg>`,
+      energy: `<svg ${SS}><rect x="0" y="160" width="320" height="20" fill="#10B981" fill-opacity=".18"/><circle cx="40" cy="36" r="15" fill="#FDE68A"/><g stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round" class="sc-blink"><path d="M40 12 V16 M40 56 V60 M16 36 H20 M60 36 H64 M23 19 L26 22 M54 50 L57 53 M57 19 L54 22 M26 50 L23 53"/></g><g transform="translate(20 118)"><path d="M0 30 L14 0 H70 L56 30 Z" fill="#1D4ED8" stroke="#93C5FD" stroke-width="2"/><path d="M28 0 L14 30 M42 0 L28 30 M56 0 L42 30 M7 15 H63" stroke="#93C5FD" stroke-width="1.2"/><rect x="30" y="30" width="6" height="12" fill="#64748B"/></g><path d="M110 160 L114 66 L118 160 Z" fill="#E2E8F0"/><g><path d="M114 64 Q108 40 114 20 Q120 40 114 64Z" fill="#F8FAFC"/><path d="M114 64 Q108 40 114 20 Q120 40 114 64Z" fill="#F8FAFC" transform="rotate(120 114 64)"/><path d="M114 64 Q108 40 114 20 Q120 40 114 64Z" fill="#F8FAFC" transform="rotate(240 114 64)"/><animateTransform attributeName="transform" type="rotate" from="0 114 64" to="360 114 64" dur="5s" repeatCount="indefinite"/></g><circle cx="114" cy="64" r="5" fill="#94A3B8"/><path d="M165 160 L168 94 L171 160 Z" fill="#E2E8F0"/><g><path d="M168 92 Q164 76 168 66 Q172 76 168 92Z" fill="#F8FAFC"/><path d="M168 92 Q164 76 168 66 Q172 76 168 92Z" fill="#F8FAFC" transform="rotate(120 168 92)"/><path d="M168 92 Q164 76 168 66 Q172 76 168 92Z" fill="#F8FAFC" transform="rotate(240 168 92)"/><animateTransform attributeName="transform" type="rotate" from="0 168 92" to="360 168 92" dur="3.5s" repeatCount="indefinite"/></g><circle cx="168" cy="92" r="4" fill="#94A3B8"/><rect x="249" y="96" width="6" height="64" fill="#334155"/><g class="sc-pop"><rect x="198" y="28" width="108" height="70" rx="10" fill="#0F172A" stroke="#F5B718" stroke-width="2"/><text x="252" y="47" text-anchor="middle" font-size="8" fill="#F5B718">ประกาศถึงผู้ถือหุ้น</text><text x="252" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">งดปันผล 2 ปี</text><text x="252" y="86" text-anchor="middle" font-size="8" fill="#6EE7B7">→ นำเงินไปขยายกิจการ</text></g><g class="sc-float"><path d="M222 160 Q220 142 224 126" stroke="#10B981" stroke-width="3" fill="none"/><ellipse cx="216" cy="134" rx="8" ry="4" transform="rotate(-30 216 134)" fill="#34D399"/><ellipse cx="231" cy="128" rx="8" ry="4" transform="rotate(30 231 128)" fill="#34D399"/></g><text x="284" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="#34D399" class="g">ESG</text></svg>`,
+      coaster: `<svg ${SS}><path d="M60 78 V170 M100 44 V170 M150 112 V170 M250 84 V170 M300 92 V170" stroke="#334155" stroke-width="3"/><path d="M232 100 L268 70 M118 70 L150 112" stroke="#1E293B" stroke-width="2"/><path id="coasterTrack" d="M14 120 C 50 120, 60 40, 100 40 S 150 150, 190 150 S 250 70, 306 90" fill="none" stroke="#F5B718" stroke-width="5" stroke-linecap="round"/><g class="sc-pop"><rect x="74" y="6" width="56" height="20" rx="10" fill="#10B981"/><text x="102" y="20" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">จ. +300</text></g><g class="sc-pop"><rect x="162" y="158" width="56" height="20" rx="10" fill="#E11925"/><text x="190" y="172" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">พ. -400</text></g><g class="sc-pop"><rect x="258" y="56" width="56" height="20" rx="10" fill="#64748B"/><text x="286" y="70" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">ศ. ±0</text></g><g><rect x="-12" y="-14" width="24" height="12" rx="3" fill="#E11925"/><circle cx="-6" cy="-1" r="3" fill="#E2E8F0"/><circle cx="6" cy="-1" r="3" fill="#E2E8F0"/><circle cx="-4" cy="-18" r="4" fill="#FCD9B6"/><circle cx="5" cy="-18" r="4" fill="#FCD9B6"/><animateMotion dur="4.5s" repeatCount="indefinite" rotate="auto"><mpath href="#coasterTrack"/></animateMotion></g></svg>`,
+      routine: `<svg ${SS}><rect x="12" y="16" width="92" height="148" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/><rect x="114" y="16" width="92" height="148" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/><rect x="216" y="16" width="92" height="148" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/><g font-weight="700" font-size="9"><circle cx="28" cy="32" r="9" fill="#10B981" fill-opacity=".25"/><text x="28" y="35" text-anchor="middle" fill="#10B981" class="g">A</text><circle cx="130" cy="32" r="9" fill="#10B981" fill-opacity=".25"/><text x="130" y="35" text-anchor="middle" fill="#10B981" class="g">B</text><circle cx="232" cy="32" r="9" fill="#10B981" fill-opacity=".25"/><text x="232" y="35" text-anchor="middle" fill="#10B981" class="g">C</text></g><g class="sc-float" stroke="#CBD5E1" stroke-width="2" fill="none" stroke-linecap="round"><path d="M50 60 Q46 54 50 48"/><path d="M60 60 Q56 52 60 44"/></g><path d="M38 66 H72 L68 98 Q67 104 61 104 H49 Q43 104 42 98 Z" fill="#fff"/><path d="M72 72 Q84 74 80 86 Q78 92 70 92" stroke="#fff" stroke-width="3" fill="none"/><ellipse cx="55" cy="67" rx="16" ry="3.5" fill="#78350F"/><rect x="28" y="112" width="58" height="30" rx="4" fill="#F8FAFC"/><rect x="28" y="112" width="58" height="7" rx="3" fill="#E11925"/><path d="M33 125 H80 M33 131 H74 M33 137 H78" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/><text x="58" y="156" text-anchor="middle" font-size="8" fill="#94A3B8">อ่านสรุป 3 บรรทัด</text><rect x="132" y="50" width="56" height="54" rx="8" fill="#F8FAFC"/><path d="M132 58 Q132 50 140 50 H180 Q188 50 188 58 V64 H132 Z" fill="#10B981"/><text x="160" y="94" text-anchor="middle" font-size="22" font-weight="700" fill="#0F172A" class="g">25</text><g class="sc-spin"><path d="M148 128 A12 12 0 1 1 152 137" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M146 124 L148 129 L153 127" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round"/></g><text x="160" y="131" text-anchor="middle" font-size="6.5" font-weight="700" fill="#6EE7B7" class="g">AUTO</text><text x="160" y="156" text-anchor="middle" font-size="8" fill="#94A3B8">ตัดเงินอัตโนมัติ</text><rect x="226" y="48" width="36" height="26" rx="3" fill="#0B1424" stroke="#22D3EE" stroke-width="1.5"/><rect x="266" y="48" width="36" height="26" rx="3" fill="#0B1424" stroke="#22D3EE" stroke-width="1.5"/><rect x="246" y="80" width="36" height="26" rx="3" fill="#0B1424" stroke="#22D3EE" stroke-width="1.5"/><path d="M230 68 L238 60 L246 64 L258 54 M270 56 L280 66 L290 60 L298 68 M250 100 L258 92 L266 96 L278 86" stroke="#10B981" stroke-width="1.5" fill="none"/><ellipse cx="264" cy="128" rx="16" ry="9" fill="none" stroke="#F5B718" stroke-width="2.5"/><circle cx="264" cy="128" r="4" fill="#F5B718" class="sc-blink"/><text x="262" y="156" text-anchor="middle" font-size="8" fill="#94A3B8">เฝ้าจอทั้งวัน</text></svg>`
+    };
+
+    const ARCHETYPES = {
+      surfer: {
+        id: 'surfer', name: 'THE TREND SURFER', titleTH: 'นักโต้คลื่นไซเบอร์', charEN: 'Neon Surfer', mood: 'สายลุย ซิ่งตามกระแส ไวทุกข่าว', color: '#22D3EE', risk: 4,
+        desc: 'คุณไวต่อกระแส จับโมเมนตัมเก่ง เห็นเทรนด์ใหม่บนโซเชียลก่อนใคร และพร้อมลุยทันทีเมื่อคลื่นมา',
+        tags: ['#Momentum', '#Trend', '#FastAction'],
+        power: 'จับกระแสไว คว้าโอกาสได้ก่อนคนอื่น', weakness: 'FOMO ง่าย และมักลืมตั้งจุดตัดขาดทุน',
+        stats: { risk: 80, patience: 25, research: 40, speed: 95 }, buddy: 'social', clash: 'zen',
+        mindset: 'Ride the wave, respect the exit — เกาะกระแสได้ แต่ต้องรู้จุดลงเสมอ',
+        pie: [{ label: 'หุ้นโมเมนตัม', pct: 50, color: '#22D3EE' }, { label: 'กองทุนธีมเมติก', pct: 30, color: '#0284C7' }, { label: 'เงินสดสำรอง', pct: 20, color: '#64748B' }],
+        wisdom: 'การเทรดตามกระแสต้องกำหนดจุด Stop Loss ไว้ล่วงหน้า (เช่น 5–8%) เพื่อไม่ให้การเก็งกำไรระยะสั้นกลายเป็นการติดดอยระยะยาว',
+        match: { title: 'Technical & Momentum Insight', detail: 'เครื่องมือสแกนหุ้นและบทวิเคราะห์เทคนิคจาก Trinity พร้อมฟีเจอร์ตั้ง Stop Loss อัตโนมัติ' }
+      },
+      fortress: {
+        id: 'fortress', name: 'THE FORTRESS BUILDER', titleTH: 'อัศวินป้อมปราการ', charEN: 'Citadel Knight', mood: 'มั่นคง สติปัญญาดี เซฟเงินต้น', color: '#F5B718', risk: 1,
+        desc: 'คุณให้ความสำคัญกับความมั่นคง เงินต้นต้องปลอดภัย และชอบเห็นกระแสเงินสดจากปันผลเข้ากระเป๋าอย่างสม่ำเสมอ',
+        tags: ['#Dividend', '#LowRisk', '#Cashflow'],
+        power: 'ปกป้องเงินต้นได้เหนียวแน่น ไม่หวั่นไหวตามข่าว', weakness: 'ปลอดภัยเกินไปจนผลตอบแทนแพ้เงินเฟ้อ',
+        stats: { risk: 20, patience: 90, research: 65, speed: 25 }, buddy: 'zen', clash: 'chaos',
+        mindset: 'Safety First — ปกป้องเงินต้นก่อน แล้วค่อยให้ผลตอบแทนทบต้นทำงาน',
+        pie: [{ label: 'หุ้นปันผลพื้นฐานดี', pct: 40, color: '#F5B718' }, { label: 'ตราสารหนี้คุณภาพ', pct: 40, color: '#0284C7' }, { label: 'กองทุนตลาดเงิน', pct: 20, color: '#64748B' }],
+        wisdom: 'เวลาเลือกหุ้นปันผล ให้ดู Dividend Payout Ratio ว่าบริษัทจ่ายจากกำไรจริงอย่างยั่งยืน ไม่ใช่จ่ายสูงเกินกำลังจนกระทบอนาคตของธุรกิจ',
+        match: { title: 'Dividend Stock Insight', detail: 'คัดหุ้นปันผลพื้นฐานแกร่งจากบทวิเคราะห์ Trinity Research เหมาะกับการสร้างกระแสเงินสด' }
+      },
+      diver: {
+        id: 'diver', name: 'THE DEEP DIVER', titleTH: 'นักดำน้ำลึกนกฮูก', charEN: 'Data Explorer', mood: 'เยือกเย็น สายวิเคราะห์ มองขาด', color: '#3B82F6', risk: 3,
+        desc: 'คุณเชื่อในตัวเลขจริง ชอบดำดิ่งลงไปในงบการเงิน และกล้าซื้อหุ้นดีราคาถูกในวันที่คนอื่นตกใจขาย',
+        tags: ['#ValueInvestor', '#DataDriven', '#MarginOfSafety'],
+        power: 'อ่านงบการเงินขาด หาของดีราคาถูกเจอ', weakness: 'วิเคราะห์นานจนพลาดจังหวะ (Analysis Paralysis)',
+        stats: { risk: 55, patience: 80, research: 95, speed: 35 }, buddy: 'pioneer', clash: 'surfer',
+        mindset: 'Margin of Safety — ซื้อของดีในราคาที่ต่ำกว่ามูลค่าที่แท้จริง',
+        pie: [{ label: 'หุ้นคุณค่า (Value)', pct: 60, color: '#3B82F6' }, { label: 'หุ้นฟื้นตัว', pct: 15, color: '#10B981' }, { label: 'เงินสดรอจังหวะ', pct: 25, color: '#F5B718' }],
+        wisdom: 'มองหาบริษัทที่มีส่วนเผื่อความปลอดภัย (MOS) สูงและหนี้ต่ำ (D/E ต่ำกว่า 1 สำหรับธุรกิจทั่วไป) จะช่วยให้พอร์ตทนทานในช่วงเศรษฐกิจชะลอตัว',
+        match: { title: 'Fundamental Research', detail: 'เข้าถึงบทวิเคราะห์ปัจจัยพื้นฐานเชิงลึกและราคาเป้าหมายจาก Trinity Research' }
+      },
+      zen: {
+        id: 'zen', name: 'THE ZEN ALLOCATOR', titleTH: 'ปรมาจารย์คาปิบาร่า', charEN: 'Zen Capybara', mood: 'ชิลสุดๆ ไม่ตื่นตระหนก ปล่อยเงินทำงาน', color: '#10B981', risk: 2,
+        desc: 'คุณใจเย็นเหมือนคาปิบาร่าแช่ออนเซ็น ไม่ตื่นตามตลาด ตั้งระบบสะสมเงินอัตโนมัติ แล้วเอาเวลาไปใช้ชีวิต',
+        tags: ['#DCA', '#Balanced', '#PeaceOfMind'],
+        power: 'วินัยเหล็ก DCA ได้ต่อเนื่องไม่มีสะดุด', weakness: 'ตั้งระบบแล้วลืม ไม่เคยกลับมาทบทวนพอร์ต',
+        stats: { risk: 40, patience: 95, research: 40, speed: 20 }, buddy: 'fortress', clash: 'surfer',
+        mindset: 'System > Emotion — ใช้วินัยและระบบสร้างความมั่งคั่ง ไม่ใช้อารมณ์เฝ้าจอ',
+        pie: [{ label: 'กองทุนดัชนี', pct: 50, color: '#10B981' }, { label: 'หุ้นบิ๊กแคป (DCA)', pct: 30, color: '#0284C7' }, { label: 'พันธบัตรรัฐบาล', pct: 20, color: '#F5B718' }],
+        wisdom: 'การปรับสมดุลพอร์ต (Rebalance) ปีละ 1–2 ครั้ง ช่วยขายสินทรัพย์ที่ขึ้นมามาก แล้วไปซื้อสินทรัพย์ที่ยังถูกได้อย่างมีวินัย',
+        match: { title: 'Smart DCA', detail: 'ตั้งออมหุ้นอัตโนมัติรายเดือน เริ่มได้ด้วยเงินจำนวนน้อย ไม่ต้องจับจังหวะตลาด' }
+      },
+      pioneer: {
+        id: 'pioneer', name: 'THE FUTURE PIONEER', titleTH: 'นักสำรวจอวกาศ', charEN: 'Cosmic Astronaut', mood: 'มองการณ์ไกล เชื่อในเทคโนโลยีเปลี่ยนโลก', color: '#8B5CF6', risk: 4,
+        desc: 'คุณเชื่อในพลังเทคโนโลยีและพลังงานสะอาดที่จะเปลี่ยนโลก มองไกลระดับอวกาศ และยอมรับความผันผวนเพื่อการเติบโตระยะยาว',
+        tags: ['#Megatrend', '#AI_Tech', '#ESG'],
+        power: 'มองเห็นเมกะเทรนด์ก่อนใคร', weakness: 'หลงรักเรื่องเล่าจนลืมดูราคาที่จ่าย',
+        stats: { risk: 80, patience: 85, research: 60, speed: 45 }, buddy: 'diver', clash: 'fortress',
+        mindset: 'Time in the market — ถือธุรกิจที่เชื่อมั่นให้นานพอที่จะเห็นการเติบโต',
+        pie: [{ label: 'หุ้นเทคโนโลยี/นวัตกรรม', pct: 50, color: '#8B5CF6' }, { label: 'กองทุน ESG', pct: 30, color: '#10B981' }, { label: 'กองทุนดัชนีโลก', pct: 20, color: '#F5B718' }],
+        wisdom: 'หุ้นนวัตกรรมผันผวนสูงในระยะสั้น การทยอยซื้อแบบ DCA และมองกรอบเวลา 3–5 ปีขึ้นไป ช่วยลดความเสี่ยงจากการซื้อผิดจังหวะได้',
+        match: { title: 'Global Tech & ESG Insight', detail: 'ติดตามบทวิเคราะห์ธีมเทคโนโลยีและพลังงานสะอาดจาก Trinity Research พร้อมลงทุนหุ้นต่างประเทศ' }
+      },
+      chaos: {
+        id: 'chaos', name: 'THE CHAOS SURFER', titleTH: 'จิ้งจอกสายวัดใจ', charEN: 'Volatile Fox', mood: 'ชอบความตื่นเต้น กล้าในวันที่คนอื่นกลัว', color: '#F97316', risk: 5,
+        desc: 'คุณกล้าในวันที่คนอื่นกลัว ตลาดยิ่งเหวี่ยงยิ่งตื่นเต้น ใส่หูฟังเปิดเพลงมันส์ แล้วยื่นช้อนรอช้อนซื้อตอนไฟลุก',
+        tags: ['#Volatility', '#Agile', '#BuyTheFear'],
+        power: 'ใจนิ่งในวันที่ตลาดเหวี่ยงหนัก', weakness: 'ขนาดไม้ใหญ่เกินไป พลาดทีเดียวเจ็บหนัก',
+        stats: { risk: 95, patience: 30, research: 50, speed: 90 }, buddy: 'surfer', clash: 'fortress',
+        mindset: 'Embrace volatility, control the size — สนุกกับความผันผวนได้ เมื่อคุมขนาดความเสี่ยงได้',
+        pie: [{ label: 'กองทุนดัชนี (แกนหลัก)', pct: 40, color: '#0284C7' }, { label: 'หุ้นผันผวนสูง', pct: 40, color: '#F97316' }, { label: 'เงินสดสำรอง', pct: 20, color: '#64748B' }],
+        wisdom: 'ผู้ชนะในตลาดผันผวนไม่ใช่คนที่ทายถูกเสมอ แต่คือคนที่คุมขนาดไม้ (Position Sizing) เช่น เสี่ยงไม่เกิน 1–2% ของพอร์ตต่อการเทรดหนึ่งครั้ง',
+        match: { title: 'Active Trader Toolkit', detail: 'เครื่องมือเทรดและบริหารความเสี่ยงสำหรับสายแอคทีฟ (ควรมีแกนพอร์ตที่มั่นคงก่อน)' }
+      },
+      social: {
+        id: 'social', name: 'THE SOCIAL EXPLORER', titleTH: 'แมวเหมียวคาเฟ่การเงิน', charEN: 'Social Cat', mood: 'สายเปิดรับ ฟังผู้เชี่ยวชาญ เข้าสังคม', color: '#EC4899', risk: 3,
+        desc: 'คุณชอบจิบกาแฟพลางอ่านบทวิเคราะห์ฉบับย่อ ฟังมุมมองผู้เชี่ยวชาญ แลกเปลี่ยนกับเพื่อน แล้วตัดสินใจอย่างมีเหตุผล',
+        tags: ['#ResearchBased', '#ExpertInsight', '#Community'],
+        power: 'กรองข้อมูลจากมืออาชีพได้ไว ไม่หลงข่าวลือ', weakness: 'พึ่งคนอื่นมากไปจนไม่เข้าใจด้วยตัวเอง',
+        stats: { risk: 50, patience: 60, research: 75, speed: 55 }, buddy: 'diver', clash: 'chaos',
+        mindset: 'Guided Intelligence — ใช้ความรู้ของมืออาชีพนำทาง แต่ตัดสินใจด้วยตัวเอง',
+        pie: [{ label: 'หุ้นตามบทวิเคราะห์', pct: 50, color: '#EC4899' }, { label: 'กองทุนรวมผสม', pct: 30, color: '#0284C7' }, { label: 'สภาพคล่อง', pct: 20, color: '#F5B718' }],
+        wisdom: 'อ่านบทวิเคราะห์จากหลายแหล่ง และเข้าใจเหตุผลเบื้องหลังราคาเป้าหมาย จะช่วยให้คุณไม่ต้องพึ่งคำแนะนำเพียงอย่างเดียว',
+        match: { title: 'Trinity Daily Digest', detail: 'สรุปตลาดและบทวิเคราะห์ประจำวันจาก Trinity Research อ่านจบใน 2 นาที' }
+      }
+    };
+    const KEYS = Object.keys(ARCHETYPES);
+    const STAT_LABELS = { risk: 'กล้าเสี่ยง', patience: 'ความอดทน', research: 'สายข้อมูล', speed: 'ความไว' };
+
+    const INTRO = [
+      { scene: 'night', title: 'ตี 1 คืนวันศุกร์...', text: 'นอนไถฟีดเพลินๆ เห็นเพื่อนโพสต์พอร์ตหุ้นสีเขียวเต็มจอ ทุกคนดูรู้เรื่องการลงทุนกันหมด... ยกเว้นเรา ที่ยังไม่รู้เลยว่าจะเริ่มตรงไหน' },
+      { scene: 'save', title: '3 เดือนแห่งความอดทน', text: 'งดชานมไข่มุกไป 40 แก้ว ห่อข้าวไปทำงานทุกวันพุธ จนในที่สุดก็มีเงินเก็บก้อนแรก 10,000 บาท ภูมิใจสุดๆ' },
+      { scene: 'journey', title: 'แต่เงินที่นอนนิ่ง ไม่ได้ปลอดภัยอย่างที่คิด', text: 'เงินเฟ้อค่อยๆ กัดกินมูลค่าทุกวัน ถึงเวลาออกเดินทาง 12 เดือนในโลกการลงทุนจำลอง ทุกการตัดสินใจจะเผยตัวตนที่แท้จริงของคุณ', ask: true }
+    ];
+
+    const SCENARIOS = [
+      { chapter: 'บทที่ 1 · เงินก้อนแรก', short: 'เงินก้อนแรก', time: 'เดือนที่ 1 · ศุกร์ 18:30', wallet: 10000, scene: 'payday',
+        story: 'เงินเดือนเข้าแล้ว! {name}เปิดแอปธนาคาร เห็นเงินเก็บก้อนแรก 10,000 บาทนอนรออยู่ ระหว่างนั่งรถไฟฟ้ากลับบ้าน ข่าวด่วนก็เด้งขึ้นมา...',
+        title: 'จะเริ่มลงทุนเงินก้อนแรกยังไงดี?', text: 'บริษัทเทคโนโลยี AI ระดับโลกที่ทุกคนใช้อยู่ กำลังจะเปิดตัวนวัตกรรมใหม่สัปดาห์หน้า',
+        options: [
+          { text: 'ลงหุ้นเทคฯ ตัวนี้เต็ม 10,000 บาท เชื่อในอนาคต', sub: 'เน้นเติบโตไปกับนวัตกรรมเปลี่ยนโลก', w: { pioneer: 2, surfer: 1 }, risk: 5, learn: 'Concentration Risk',
+            react: 'ใจถึงมาก! แต่การใส่เงินทั้งหมดในหุ้นตัวเดียวเรียกว่า "ความเสี่ยงกระจุกตัว" ถ้าข่าวไม่เป็นอย่างที่คิด พอร์ตจะสะเทือนทั้งก้อน' },
+          { text: 'เลือกหุ้นปันผลพื้นฐานดีหรือตราสารหนี้ดีกว่า', sub: 'เน้นเงินต้นปลอดภัย มีเงินสดคืนสม่ำเสมอ', w: { fortress: 2 }, risk: 1, learn: 'Inflation',
+            react: 'สายชัวร์! เงินต้นนิ่งกว่าแน่นอน แต่อย่าลืมเช็กว่าผลตอบแทนชนะเงินเฟ้อด้วยนะ ไม่งั้นเงินจะค่อยๆ ซื้อของได้น้อยลง' },
+          { text: 'กระจายเงินใส่ทั้งหุ้นเทคฯ หุ้นปันผล และกองทุนรวม', sub: 'ไม่ใส่ไข่ทุกฟองไว้ในตะกร้าเดียว', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Diversification',
+            react: 'นี่คือการกระจายความเสี่ยงแบบมือโปร! ถ้าตัวไหนพลาด ตัวอื่นยังช่วยพยุงพอร์ตไว้ได้' } ] },
+      { chapter: 'บทที่ 2 · วันที่ตลาดแดงเดือด', short: 'ตลาดแดงเดือด', time: 'เดือนที่ 3 · อังคาร 07:45', wallet: 9500, scene: 'crash',
+        story: 'ยังไม่ทันได้จิบกาแฟแก้วแรก เสียงแจ้งเตือนก็ดังรัวๆ จอมือถือของ{name}เต็มไปด้วยตัวเลขสีแดง...',
+        title: 'พอร์ตติดลบครั้งแรก ทำยังไงดี?', text: 'ข่าวเศรษฐกิจโลกทำตลาดหุ้นร่วง -5% พอร์ต 10,000 บาทของคุณเหลือ 9,500 บาท',
+        options: [
+          { text: 'โอนเงินเพิ่มมาช้อนซื้อทันที', sub: 'ฉวยโอกาสช่วงที่คนอื่นตกใจ', w: { chaos: 2, diver: 1 }, risk: 5, learn: 'Emergency Fund',
+            react: 'กล้าในวันที่คนอื่นกลัว! แต่ต้องแน่ใจว่าเงินที่โอนเพิ่มไม่ใช่ "เงินสำรองฉุกเฉิน" ที่ต้องเก็บไว้ใช้ยามจำเป็นนะ' },
+          { text: 'หายใจลึกๆ ปิดแอป เชื่อว่าระยะยาวจะฟื้น', sub: 'ยังไม่ขาย = ยังไม่ขาดทุนจริง', w: { zen: 2, pioneer: 1 }, risk: 3, learn: 'Unrealized Loss',
+            react: 'ใจนิ่งมาก! ตัวเลขติดลบที่ยังไม่ได้ขายเรียกว่า "ขาดทุนทางบัญชี" ถ้าพื้นฐานบริษัทไม่เปลี่ยน ก็ยังไม่ต้องตกใจ' },
+          { text: 'เปิดอ่านบทวิเคราะห์ Trinity Research ก่อน', sub: 'ฟังมุมมองมืออาชีพก่อนตัดสินใจ', w: { social: 2, diver: 1 }, risk: 3, learn: 'Panic Selling',
+            react: 'มีสติสุดๆ! การหาข้อมูลก่อนตัดสินใจ ช่วยกันไม่ให้เผลอ "ขายตอนตกใจ" ซึ่งมักเป็นจุดที่ราคาถูกที่สุด' } ] },
+      { chapter: 'บทที่ 3 · แรงกดดันจากเพื่อน', short: 'แรงกดดันจากเพื่อน', time: 'เดือนที่ 4 · เสาร์ 22:10', wallet: 9800, scene: 'chat',
+        story: 'คืนวันเสาร์ที่ควรได้พัก แต่ไลน์กลุ่ม "แก๊งมหาลัย" เด้งไม่หยุดจนมือถือของ{name}ร้อนไปหมด...',
+        title: 'เพื่อนชวนซื้อตาม ไปด้วยไหม?', text: 'เพื่อนแคปจอพอร์ตกำไร 30% จากหุ้นรถยนต์ไฟฟ้า แล้วเชียร์ให้รีบซื้อตามก่อนราคาจะวิ่งไปไกลกว่านี้',
+        options: [
+          { text: 'ซื้อตามทันที! กลัวตกขบวน', sub: 'เกาะกระแสโมเมนตัม', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'FOMO & Stop Loss',
+            react: 'ขบวนนี้วิ่งแรง! แต่การซื้อเพราะกลัวตกรถเรียกว่า FOMO ก่อนกดซื้อ ลองกำหนดจุดตัดขาดทุน (Stop Loss) ไว้ก่อนเสมอ' },
+          { text: 'ขอดูงบการเงินและราคาเป้าหมายก่อน', sub: 'เช็กว่าราคายังสมเหตุสมผลไหม', w: { diver: 2, social: 1 }, risk: 3, learn: 'P/E Ratio',
+            react: 'เยือกเย็น! หุ้นที่ขึ้นมา 30% แล้วอาจแพงเกินมูลค่าจริง ลองเทียบค่า P/E กับบริษัทคู่แข่งก่อนตัดสินใจ' },
+          { text: 'ยินดีกับเพื่อน แต่เราลงทุนตามแผนของเรา', sub: 'มั่นคงในเส้นทางตัวเอง', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Investment Plan',
+            react: 'ยึดแผนตัวเองได้ คือทักษะที่นักลงทุนระดับโลกยังต้องฝึก กำไรของเพื่อนไม่ใช่เส้นชัยของเรา' } ] },
+      { chapter: 'บทที่ 4 · สายตรงจาก Trinity', short: 'สายตรง Trinity', time: 'เดือนที่ 6 · พุธ 12:15', wallet: 10100, scene: 'research',
+        story: 'พักเที่ยงวันพุธ ระหว่างรอข้าวมันไก่ อีเมลบทวิเคราะห์ฉบับใหม่จาก Trinity Research ก็ส่งถึง{name}พอดี...',
+        title: 'นักวิเคราะห์ชี้เป้า จะทำยังไงต่อ?', text: 'หุ้นกลุ่มโครงสร้างพื้นฐานราคาลงมาลึก แต่นักวิเคราะห์มองว่ามีแนวโน้มเติบโตสม่ำเสมอใน 3 ปี',
+        options: [
+          { text: 'เชื่อมือผู้เชี่ยวชาญ ซื้อตามคำแนะนำเลย', sub: 'ตัดสินใจตามบทวิเคราะห์มืออาชีพ', w: { social: 2, surfer: 1 }, risk: 3, learn: 'Target Price',
+            react: 'ไว้ใจมืออาชีพเป็นจุดเริ่มต้นที่ดี! ลองอ่านเหตุผลเบื้องหลัง "ราคาเป้าหมาย" ด้วย จะได้รู้ว่าเมื่อไหร่ควรทบทวน' },
+          { text: 'อ่านบทวิเคราะห์ละเอียด แล้วคิดเองอีกรอบ', sub: 'ตรวจตัวเลขซ้ำเพื่อความชัวร์', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Due Diligence',
+            react: 'ตรวจซ้ำด้วยตัวเองคือหัวใจของนักลงทุน บทวิเคราะห์คือแผนที่ แต่คนเดินทางคือคุณ' },
+          { text: 'ตั้ง DCA สะสมหุ้นตัวนี้ทุกเดือน', sub: 'ซื้อเท่าๆ กันทุกเดือน ไม่ต้องเฝ้าจอ', w: { zen: 2, fortress: 1 }, risk: 2, learn: 'Dollar-Cost Averaging',
+            react: 'DCA ช่วยเฉลี่ยต้นทุนให้อัตโนมัติ ราคาลงก็ได้ของถูก ราคาขึ้นพอร์ตก็โต ไม่ต้องเดาจังหวะเลย' } ] },
+      { chapter: 'บทที่ 5 · เดิมพันกับอนาคต', short: 'เดิมพันกับอนาคต', time: 'เดือนที่ 8 · จันทร์ 20:00', wallet: 10300, scene: 'energy',
+        story: '{name}ดูสารคดีโลกร้อนจบ แล้วไปเจอบริษัทหนึ่งที่กำลังสร้างฟาร์มพลังงานสะอาดใหญ่ที่สุดในภูมิภาค...',
+        title: 'บริษัทงดปันผล 2 ปี เอาไงดี?', text: 'บริษัทพลังงานสะอาดมีนวัตกรรมน่าสนใจ แต่ประกาศว่าจะงดจ่ายปันผล 2 ปี เพื่อนำเงินไปขยายกิจการ',
+        options: [
+          { text: 'ซื้อเลย พร้อมถือยาวเติบโตไปกับธุรกิจ', sub: 'ยอมแลกปันผลระยะสั้นกับการเติบโต', w: { pioneer: 2, diver: 1 }, risk: 4, learn: 'Growth Stock',
+            react: 'คุณเลือก "หุ้นเติบโต" ที่เอากำไรไปลงทุนต่อ ถ้าธุรกิจโตจริง มูลค่าจะสะท้อนออกมาในระยะยาว' },
+          { text: 'ขอผ่าน ชอบบริษัทที่จ่ายปันผลชัวร์ๆ', sub: 'เน้นกระแสเงินสดที่แน่นอน', w: { fortress: 2 }, risk: 1, learn: 'Compounding',
+            react: 'กระแสเงินสดคือพลัง! ถ้านำปันผลกลับไปลงทุนต่อ จะเกิด "ผลตอบแทนทบต้น" ที่ทำให้พอร์ตโตแบบก้อนหิมะ' },
+          { text: 'เฝ้าดูก่อน มีข่าวดีค่อยเข้าไปเก็งกำไร', sub: 'เข้าออกเป็นรอบตามจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Priced-in',
+            react: 'จับจังหวะข่าวคือสไตล์เทรดเดอร์ แต่ระวัง! ข่าวดีบางครั้งถูกสะท้อนในราคาไปแล้วก่อนประกาศ' } ] },
+      { chapter: 'บทที่ 6 · สัปดาห์รถไฟเหาะ', short: 'สัปดาห์รถไฟเหาะ', time: 'เดือนที่ 10 · ทั้งสัปดาห์', wallet: 10300, scene: 'coaster',
+        story: 'สัปดาห์นี้ตลาดเหวี่ยงจนหัวใจของ{name}เต้นตามกราฟ เปิดแอปทีไรตัวเลขเปลี่ยนสีทุกที...',
+        title: 'ตลาดเหวี่ยงแรง รับมือยังไง?', text: 'วันจันทร์พอร์ตบวก +300 บาท วันพุธดิ่ง -400 บาท วันศุกร์เด้งกลับมาเท่าทุน',
+        options: [
+          { text: 'ชอบมาก! ตลาดสวิงแบบนี้มีจังหวะทำกำไร', sub: 'สนุกกับความผันผวน', w: { chaos: 2, surfer: 1 }, risk: 5, learn: 'Transaction Cost',
+            react: 'ความผันผวนคือสนามเด็กเล่นของคุณ! แต่อย่าลืมว่าค่าธรรมเนียมจากการซื้อขายบ่อยๆ ก็กินกำไรได้เหมือนกัน' },
+          { text: 'ปรับสมดุลพอร์ต ย้ายบางส่วนไปที่ปลอดภัย', sub: 'ลดความแกว่งของพอร์ต', w: { fortress: 2, zen: 1 }, risk: 2, learn: 'Rebalancing',
+            react: 'การปรับสมดุลพอร์ตช่วยดึงความเสี่ยงกลับมาอยู่ในระดับที่คุณนอนหลับสบาย' },
+          { text: 'ใช้จังหวะคนตกใจ เก็บหุ้นดีราคาถูก', sub: 'หาของดีช่วงตลาดสั่น', w: { diver: 2, pioneer: 1 }, risk: 3, learn: 'Margin of Safety',
+            react: 'ตลาดสั่นคือช่วงลดราคา! ถ้ารู้ว่าของชิ้นไหนดีจริง คุณจะซื้อได้อย่างมั่นใจโดยมีส่วนเผื่อความปลอดภัย' } ] },
+      { chapter: 'บทที่ 7 · ชีวิตจริงของนักลงทุน', short: 'ชีวิตจริง', time: 'เดือนที่ 12 · วันธรรมดา', wallet: 10450, scene: 'routine',
+        story: 'ครบ 1 ปีแล้ว! {name}เริ่มรู้ว่าการลงทุนไม่ใช่การวิ่งระยะสั้น แต่คือมาราธอนที่ต้องเข้ากับชีวิตจริง...',
+        title: 'สไตล์ดูแลเงินแบบไหนที่ใช่คุณ?', text: 'ในหนึ่งสัปดาห์ของการทำงาน คุณอยากติดตามเรื่องการลงทุนแบบไหน?',
+        options: [
+          { text: 'อ่านสรุปข่าว Trinity 3 บรรทัดตอนจิบกาแฟเช้า', sub: 'อัปเดตสั้นๆ วันละ 2 นาที', w: { social: 2, pioneer: 1 }, risk: 3, learn: 'Financial Literacy',
+            react: 'อ่านข่าวสั้นๆ ทุกวัน สะสมไป 1 ปี = ความเข้าใจตลาดที่ไม่มีใครขโมยไปได้' },
+          { text: 'ตั้งตัดเงินอัตโนมัติวันเงินเดือนออก แล้วไปใช้ชีวิต', sub: 'ให้ระบบทำงานแทน', w: { zen: 2 }, risk: 2, learn: 'Pay Yourself First',
+            react: '"จ่ายให้ตัวเองก่อน" คือเคล็ดลับของคนมีวินัยทางการเงิน เงินเก็บโตได้โดยไม่ต้องใช้แรงใจ' },
+          { text: 'เปิดแอปสแกนหาโอกาสตลอดวัน', sub: 'ติดตามใกล้ชิด ไม่พลาดทุกจังหวะ', w: { surfer: 2, chaos: 1 }, risk: 4, learn: 'Overtrading',
+            react: 'พลังงานล้นเหลือ! แต่อย่าลืมพักสายตา การเฝ้าจอทั้งวันทำให้ตัดสินใจด้วยอารมณ์ได้ง่ายขึ้น' } ] }
+    ];
+
+    const RISK_LABELS = ['', 'ระมัดระวังสูง', 'ค่อนข้างระมัดระวัง', 'สมดุล', 'ค่อนข้างกล้าเสี่ยง', 'กล้าเสี่ยงสูง'];
+    const RISK_COLORS = ['', '#0284C7', '#10B981', '#F5B718', '#F97316', '#E11925'];
+    const ANALYZE_STEPS = ['12 เดือนผ่านไปไวเหมือนโกหก…', '{name}ผ่านมาแล้ว 7 การตัดสินใจสำคัญ', 'กำลังอัญเชิญตัวละครของคุณ…'];
+    const START_WALLET = 10000;
+
+    const state = { view: 'landing', index: 0, answers: [], locked: false, result: null, muted: false, name: '' };
+    const $ = (id) => document.getElementById(id);
+    const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+    const avatar = (k, cls) => { const d = el('div', cls); d.innerHTML = ART[k]; d.setAttribute('aria-hidden', 'true'); return d; };
+    const fmt = (s) => String(s).replace(/\{name\}/g, state.name || 'คุณ');
+    const money = (n) => '฿' + n.toLocaleString('en-US');
+    const enc = encodeURIComponent;
+    const restartAnim = (node, cls) => { node.classList.remove(cls); void node.offsetWidth; node.classList.add(cls); };
+
+    async function track(event, params = {}) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: `trispark_${event}`, ...params });
+      try {
+        await fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ event_type: event, archetype: params.archetype || null, metadata: params })
+        });
+      } catch (e) {
+        console.warn('Backend sync failed', e);
+      }
+    }
+
+    const store = {
+      get() { try { return JSON.parse(localStorage.getItem(CONFIG.STORAGE_KEY)) || {}; } catch { return {}; } },
+      set(patch) { try { localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify({ ...store.get(), ...patch })); } catch {} }
+    };
+
+    let audioCtx = null;
+    function playSound(type) {
+      if (state.muted) return;
+      try {
+        const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+        audioCtx = audioCtx || new AC();
+        if (audioCtx.state === 'suspended') audioCtx.resume().catch(() => {});
+        const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        const t = audioCtx.currentTime;
+        const presets = {
+          tap: () => { osc.type = 'sine'; osc.frequency.setValueAtTime(440, t); osc.frequency.exponentialRampToValueAtTime(880, t + .08); gain.gain.setValueAtTime(.1, t); gain.gain.linearRampToValueAtTime(.001, t + .08); return .08; },
+          slide: () => { osc.type = 'triangle'; osc.frequency.setValueAtTime(300, t); osc.frequency.exponentialRampToValueAtTime(600, t + .12); gain.gain.setValueAtTime(.08, t); gain.gain.linearRampToValueAtTime(.001, t + .12); return .12; },
+          insight: () => { osc.type = 'sine'; osc.frequency.setValueAtTime(660, t); osc.frequency.setValueAtTime(990, t + .08); gain.gain.setValueAtTime(.08, t); gain.gain.linearRampToValueAtTime(.001, t + .22); return .22; },
+          victory: () => { osc.type = 'sine'; [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => osc.frequency.setValueAtTime(f, t + i * .1)); gain.gain.setValueAtTime(.16, t); gain.gain.linearRampToValueAtTime(.001, t + .55); return .55; }
+        };
+        const dur = (presets[type] || presets.tap)();
+        osc.start(t); osc.stop(t + dur);
+      } catch {}
+    }
+    function applySoundUI() {
+      $('icon-sound-on').classList.toggle('hidden', state.muted);
+      $('icon-sound-off').classList.toggle('hidden', !state.muted);
+      $('btn-sound').setAttribute('aria-pressed', String(!state.muted));
+    }
+
+    let toastTimer = null;
+    function toast(msg, ms = 2800) { const t = $('toast'); t.textContent = msg; t.classList.remove('opacity-0'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.add('opacity-0'), ms); }
+
+    function showView(name) {
+      ['landing', 'intro', 'game', 'analyzing', 'result'].forEach(v => { $(`view-${v}`).hidden = v !== name; });
+      restartAnim($(`view-${name}`), 'slide-left');
+      state.view = name;
+      name === 'landing' ? startShowcase() : stopShowcase();
+    }
+
+    let activeModal = null, lastFocus = null;
+    function openModal(id) { if (activeModal) closeModal(false); lastFocus = document.activeElement; activeModal = $(id); activeModal.hidden = false; const f = activeModal.querySelector(FOCUSABLE); f && f.focus(); }
+    function closeModal(restore = true) { if (!activeModal) return; activeModal.hidden = true; activeModal = null; if (restore && lastFocus && lastFocus.focus) lastFocus.focus(); }
+
+    let showcaseIdx = 0, showcaseTimer = null;
+    function buildDots() { const d = $('showcase-dots'); d.innerHTML = ''; KEYS.forEach(() => d.appendChild(el('span', 'h-1.5 w-1.5 rounded-full bg-slate-700 transition-all duration-500'))); }
+    function showcaseTick() {
+      const k = KEYS[showcaseIdx % KEYS.length], a = ARCHETYPES[k], art = $('showcase-art');
+      art.style.opacity = '0';
+      setTimeout(() => {
+        art.innerHTML = ART[k];
+        $('showcase-name').textContent = `${a.titleTH} · ${a.charEN}`;
+        $('showcase-name').style.color = a.color;
+        $('showcase-glow').style.background = a.color;
+        [...$('showcase-dots').children].forEach((dot, i) => {
+          const on = i === showcaseIdx % KEYS.length;
+          dot.style.width = on ? '16px' : '6px'; dot.style.background = on ? a.color : '#334155';
+        });
+        art.style.opacity = '1';
+        showcaseIdx++;
+      }, 250);
+    }
+    function startShowcase() { stopShowcase(); showcaseTick(); if (!CONFIG.REDUCED_MOTION) showcaseTimer = setInterval(showcaseTick, 2400); }
+    function stopShowcase() { clearInterval(showcaseTimer); showcaseTimer = null; }
+
+    let introIdx = 0;
+    function openIntro() {
+      closeModal(false);
+      introIdx = 0;
+      $('nickname').value = state.name || '';
+      showView('intro'); renderIntro();
+      track('intro_start');
+    }
+    function renderIntro() {
+      const p = INTRO[introIdx];
+      $('intro-scene').innerHTML = SCENES[p.scene];
+      $('intro-tag').textContent = `PROLOGUE ${introIdx + 1}/${INTRO.length}`;
+      $('intro-title').textContent = p.title;
+      $('intro-text').textContent = p.text;
+      $('intro-name').hidden = !p.ask;
+      $('btn-intro-next').textContent = p.ask ? 'ออกเดินทางเลย 🚀' : 'ต่อไป →';
+      const dots = $('intro-dots'); dots.innerHTML = '';
+      INTRO.forEach((_, i) => { const d = el('span', 'h-1.5 rounded-full transition-all'); d.style.width = i === introIdx ? '18px' : '6px'; d.style.background = i <= introIdx ? '#10B981' : '#334155'; dots.appendChild(d); });
+      restartAnim($('intro-body'), 'fade-in-scale');
+      playSound('slide');
+    }
+    function saveName() {
+      const v = ($('nickname').value || '').replace(/\s+/g, ' ').trim().slice(0, 16);
+      state.name = v; store.set({ name: v });
+    }
+    function introNext() {
+      playSound('tap');
+      if (introIdx < INTRO.length - 1) { introIdx++; renderIntro(); return; }
+      saveName(); track('intro_complete', { named: !!state.name }); startGame('intro');
+    }
+    function introSkip() { playSound('tap'); saveName(); track('intro_skip', { at: introIdx + 1 }); startGame('intro_skip'); }
+
+    function buildProgress() { const p = $('progress'); p.innerHTML = ''; SCENARIOS.forEach(() => p.appendChild(el('div', 'h-1.5 flex-1 rounded-full bg-slate-800 transition-all duration-300'))); }
+    function updateProgress() {
+      [...$('progress').children].forEach((bar, i) => { bar.className = `h-1.5 flex-1 rounded-full transition-all duration-300 ${i <= state.index ? 'bg-emerald-400 shadow-[0_0_8px_#10b981]' : 'bg-slate-800'}`; });
+      $('progress').setAttribute('aria-valuenow', String(state.index + 1));
+    }
+    function startGame(source = 'landing') {
+      closeModal(false);
+      state.index = 0; state.answers = []; state.locked = false;
+      showView('game'); buildProgress(); renderScenario();
+      track('quiz_start', { source });
+    }
+    function renderScenario() {
+      const s = SCENARIOS[state.index];
+      const n = String(state.index + 1).padStart(2, '0'), total = String(SCENARIOS.length).padStart(2, '0');
+      $('scenario-badge').textContent = `${n}/${total}`;
+      $('chapter-label').textContent = s.chapter;
+      $('chapter-time').textContent = s.time;
+      const w = $('wallet'); w.textContent = money(s.wallet);
+      w.style.color = s.wallet > START_WALLET ? '#34D399' : s.wallet < START_WALLET ? '#F87171' : '#FFFFFF';
+      restartAnim(w, 'fade-in-scale');
+      $('scenario-scene').innerHTML = SCENES[s.scene];
+      $('scenario-scene').setAttribute('aria-label', `ภาพประกอบ: ${s.chapter}`);
+      $('scenario-story').textContent = fmt(s.story);
+      $('scenario-tag').textContent = `SCENARIO ${n}`;
+      $('scenario-title').textContent = s.title;
+      $('scenario-text').textContent = s.text;
+      $('reaction').hidden = true;
+
+      const wrap = $('options'); wrap.innerHTML = '';
+      s.options.forEach((opt, i) => {
+        const btn = el('button', 'option-card w-full p-3.5 rounded-2xl text-left flex items-start gap-3 cursor-pointer');
+        btn.type = 'button'; btn.dataset.option = String(i);
+        const badge = el('span', 'w-7 h-7 rounded-xl choice-badge flex items-center justify-center font-bold text-xs shrink-0 font-display mt-0.5', 'ABC'[i]); badge.setAttribute('aria-hidden', 'true');
+        const body = el('span', 'flex flex-col flex-1');
+        body.append(el('span', 'text-sm text-white font-medium leading-snug mb-0.5', opt.text), el('span', 'text-[11px] text-slate-400 font-light leading-snug', `💡 ${opt.sub}`));
+        btn.append(badge, body); wrap.appendChild(btn);
+      });
+      $('game-card').scrollTop = 0; updateProgress(); playSound('slide');
+    }
+
+    let reactTimer = null;
+    function selectOption(i) {
+      if (state.locked) return;
+      const opt = SCENARIOS[state.index].options[i];
+      const btn = $('options').querySelector(`[data-option="${i}"]`); if (!btn || !opt) return;
+      state.locked = true;
+      [...$('options').children].forEach(b => b.classList.toggle(b === btn ? 'is-selected' : 'is-dim', true));
+      playSound('tap');
+      state.answers[state.index] = i;
+      track('answer', { scenario: state.index + 1, option: 'ABC'[i] });
+      setTimeout(() => showReaction(opt), CONFIG.REDUCED_MOTION ? 0 : 180);
+    }
+    function showReaction(opt) {
+      $('reaction-text').textContent = fmt(opt.react);
+      $('reaction-learn').textContent = opt.learn;
+      const r = $('reaction'); r.hidden = false; restartAnim(r, 'sheet-up');
+      const bar = $('reaction-bar');
+      bar.style.transition = 'none'; bar.style.width = '0%'; void bar.offsetWidth;
+      bar.style.transition = `width ${CONFIG.REACT_MS}ms linear`; bar.style.width = '100%';
+      playSound('insight');
+      clearTimeout(reactTimer);
+      reactTimer = setTimeout(advance, CONFIG.REACT_MS);
+      r.focus({ preventScroll: true });
+    }
+    function advance() {
+      if (!state.locked || state.view !== 'game') return;
+      clearTimeout(reactTimer);
+      $('reaction').hidden = true;
+      state.index++; state.locked = false;
+      state.index < SCENARIOS.length ? renderScenario() : finishQuiz();
+    }
+    function goBack() {
+      if (state.locked) return; playSound('tap');
+      if (state.index === 0) { showView('landing'); return; }
+      state.index--; state.answers.length = state.index; renderScenario();
+    }
+
+    function computeResult(answers) {
+      const totals = Object.fromEntries(KEYS.map(k => [k, 0])), lastSeen = Object.fromEntries(KEYS.map(k => [k, -1]));
+      let riskSum = 0;
+      answers.forEach((optIdx, sIdx) => {
+        const opt = SCENARIOS[sIdx].options[optIdx];
+        Object.entries(opt.w).forEach(([k, v]) => { totals[k] += v; lastSeen[k] = sIdx; });
+        riskSum += opt.risk;
+      });
+      const risk = riskSum / answers.length;
+      const ranked = [...KEYS].sort((a, b) =>
+        (totals[b] - totals[a]) || (Math.abs(ARCHETYPES[a].risk - risk) - Math.abs(ARCHETYPES[b].risk - risk)) || (lastSeen[b] - lastSeen[a]));
+      return { key: ranked[0], secondary: ranked[1], risk: Math.round(risk * 10) / 10, totals, answers: [...answers] };
+    }
+
+    function finishQuiz() {
+      showView('analyzing');
+      let step = 0, ci = 0;
+      $('analyzing-text').textContent = fmt(ANALYZE_STEPS[0]);
+      const total = CONFIG.REDUCED_MOTION ? 600 : 2700;
+      const cyc = setInterval(() => { $('analyzing-art').innerHTML = ART[KEYS[ci++ % KEYS.length]]; }, 140);
+      const txt = setInterval(() => { step = Math.min(step + 1, ANALYZE_STEPS.length - 1); $('analyzing-text').textContent = fmt(ANALYZE_STEPS[step]); }, total / ANALYZE_STEPS.length);
+      setTimeout(() => {
+        clearInterval(cyc); clearInterval(txt);
+        const result = computeResult(state.answers);
+        store.set({ last: { ...result, ts: Date.now() } });
+        renderResult(result, { celebrate: true });
+        playSound('victory');
+        track('quiz_complete', { archetype: result.key, secondary: result.secondary, risk: result.risk });
+      }, total);
+    }
+
+    function renderDonut(container, data) {
+      const C = 2 * Math.PI * 15.915; let offset = 25;
+      const segs = data.map(d => { const s = `<circle cx="21" cy="21" r="15.915" fill="transparent" stroke="${d.color}" stroke-width="6" stroke-dasharray="${d.pct} ${C - d.pct}" stroke-dashoffset="${offset}"></circle>`; offset -= d.pct; return s; }).join('');
+      container.innerHTML = `<svg viewBox="0 0 42 42" width="100%" height="100%"><circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#1E293B" stroke-width="6"></circle>${segs}</svg>`;
+      container.setAttribute('aria-label', data.map(d => `${d.label} ${d.pct}%`).join(', '));
+    }
+    function collect(key) {
+      const got = new Set(store.get().collected || []);
+      const isNew = !got.has(key); got.add(key);
+      store.set({ collected: [...got] }); refreshLanding();
+      return isNew;
+    }
+    function confetti(color) {
+      if (CONFIG.REDUCED_MOTION) return;
+      const host = $('confetti'); host.innerHTML = '';
+      const colors = [color, '#F5B718', '#10B981', '#E11925', '#FFFFFF'];
+      for (let i = 0; i < 46; i++) {
+        const s = el('span', 'confetti-piece');
+        s.style.left = Math.random() * 100 + '%';
+        s.style.background = colors[i % colors.length];
+        s.style.animationDelay = Math.random() * .5 + 's';
+        s.style.animationDuration = 1.8 + Math.random() * 1.4 + 's';
+        s.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+        s.style.setProperty('--rot', (Math.random() * 900 - 450) + 'deg');
+        host.appendChild(s);
+      }
+      setTimeout(() => { host.innerHTML = ''; }, 4000);
+    }
+    function chemCard(container, key, label) {
+      const a = ARCHETYPES[key]; container.innerHTML = '';
+      container.append(el('p', 'text-[10px] text-slate-400 mb-1', label), avatar(key, 'w-16 h-16 mx-auto'), el('p', 'text-[11px] font-semibold text-white leading-tight mt-1', a.titleTH), el('p', 'text-[9px] text-slate-500 font-display', a.charEN));
+    }
+    const animateWidth = (node, pct) => requestAnimationFrame(() => requestAnimationFrame(() => { node.style.width = pct + '%'; }));
+
+    function renderResult(result, { celebrate = false } = {}) {
+      state.result = result;
+      const a = ARCHETYPES[result.key];
+      const lvl = Math.min(5, Math.max(1, Math.round(result.risk)));
+      const view = $('view-result');
+      view.style.setProperty('--c', a.color); view.style.setProperty('--c2', a.color + '40');
+
+      $('result-owner').textContent = state.name ? `ตัวตนนักลงทุนของ ${state.name}` : 'Your Investment Identity';
+      $('hero-no').textContent = `No.${String(KEYS.indexOf(a.id) + 1).padStart(2, '0')} / ${String(KEYS.length).padStart(2, '0')}`;
+      $('hero-art').innerHTML = ART[a.id];
+      $('result-name').textContent = a.name;
+      $('result-title-th').textContent = a.titleTH;
+      $('result-char').textContent = `${a.charEN} · ${a.mood}`;
+      $('result-desc').textContent = a.desc;
+      $('result-power').textContent = a.power;
+      $('result-weakness').textContent = a.weakness;
+      $('result-mindset').textContent = a.mindset;
+      $('result-wisdom').textContent = a.wisdom;
+      $('result-match-title').textContent = a.match.title;
+      $('result-match-detail').textContent = a.match.detail;
+      $('account-profile').textContent = `${a.titleTH} (${a.charEN})`;
+      $('account-avatar').innerHTML = ART[a.id];
+
+      const tags = $('result-tags'); tags.innerHTML = '';
+      a.tags.forEach(t => { const s = el('span', 'px-2.5 py-1 rounded-full border text-[10px] font-medium', t); s.style.color = a.color; s.style.borderColor = a.color + '55'; s.style.background = a.color + '14'; tags.appendChild(s); });
+
+      const stats = $('result-stats'); stats.innerHTML = '';
+      Object.entries(a.stats).forEach(([k, v]) => {
+        const row = el('div'), head = el('div', 'flex justify-between text-[10px] mb-1');
+        head.append(el('span', 'text-slate-400', STAT_LABELS[k]), el('span', 'text-white font-mono font-bold', String(v)));
+        const trackBar = el('div', 'h-1.5 rounded-full bg-slate-800 overflow-hidden');
+        const fill = el('div', 'h-full rounded-full stat-fill'); fill.style.width = '0%'; fill.style.background = a.color;
+        trackBar.appendChild(fill); row.append(head, trackBar); stats.appendChild(row); animateWidth(fill, v);
+      });
+
+      const dna = $('result-dna'); dna.innerHTML = '';
+      if (result.totals) {
+        const totals = result.totals, sum = Object.values(totals).reduce((x, y) => x + y, 0) || 1;
+        [...KEYS].filter(k => totals[k] > 0).sort((x, y) => totals[y] - totals[x]).slice(0, 3).forEach(k => {
+          const b = ARCHETYPES[k], pct = Math.round(totals[k] / sum * 100);
+          const row = el('div', 'flex items-center gap-2.5'), mid = el('div', 'flex-1 min-w-0'), head = el('div', 'flex justify-between text-[11px] mb-1');
+          head.append(el('span', 'text-slate-200 truncate', b.titleTH), el('span', 'font-mono font-bold text-white', pct + '%'));
+          const bar = el('div', 'h-1.5 rounded-full bg-slate-800 overflow-hidden'), f = el('div', 'h-full rounded-full stat-fill'); f.style.width = '0%'; f.style.background = b.color;
+          bar.appendChild(f); mid.append(head, bar); row.append(avatar(k, 'w-9 h-9 shrink-0'), mid); dna.appendChild(row); animateWidth(f, pct);
+        });
+      } else dna.appendChild(el('p', 'text-[11px] text-slate-500', 'เล่นใหม่เพื่อดู DNA แบบละเอียด'));
+
+      $('risk-label').textContent = `${RISK_LABELS[lvl]} (${lvl}/5)`;
+      const meter = $('risk-meter'); meter.innerHTML = '';
+      for (let i = 1; i <= 5; i++) { const seg = el('div', 'h-2 flex-1 rounded-full'); seg.style.background = i <= lvl ? RISK_COLORS[i] : '#1E293B'; meter.appendChild(seg); }
+
+      const journey = $('result-journey'); journey.innerHTML = '';
+      if (Array.isArray(result.answers) && result.answers.length === SCENARIOS.length) {
+        result.answers.forEach((ai, si) => {
+          const s = SCENARIOS[si], o = s.options[ai];
+          const li = el('li', 'flex items-center gap-2 text-[11px]');
+          li.append(el('span', 'font-mono text-slate-500 w-5 shrink-0', String(si + 1).padStart(2, '0')), el('span', 'text-slate-300 truncate flex-1', s.short), el('span', 'px-2 py-0.5 rounded-md bg-violet-500/10 border border-violet-400/25 text-violet-200 shrink-0 text-[10px]', o.learn));
+          journey.appendChild(li);
+        });
+      } else journey.appendChild(el('li', 'text-[11px] text-slate-500', 'เล่นใหม่เพื่อดูเส้นทางของคุณ'));
+
+      renderDonut($('result-donut'), a.pie);
+      const legend = $('result-legend'); legend.innerHTML = '';
+      a.pie.forEach(d => {
+        const row = el('div', 'flex items-center justify-between gap-2'), left = el('div', 'flex items-center gap-2 min-w-0');
+        const dot = el('span', 'w-2.5 h-2.5 rounded-full shrink-0'); dot.style.backgroundColor = d.color;
+        left.append(dot, el('span', 'text-slate-300 truncate', d.label));
+        row.append(left, el('span', 'font-bold text-white font-mono', `${d.pct}%`)); legend.appendChild(row);
+      });
+
+      chemCard($('result-buddy'), a.buddy, '💚 คู่หูการลงทุน');
+      chemCard($('result-clash'), a.clash, '⚡ คู่ปะทะ');
+
+      showView('result');
+      $('result-scroll').scrollTop = 0;
+      restartAnim($('hero-card'), 'reveal');
+
+      const isNew = collect(a.id);
+      if (celebrate) { confetti(a.color); if (isNew) setTimeout(() => toast(`ปลดล็อกตัวละครใหม่: ${a.charEN} 🎉`), 900); }
+    }
+
+    function renderGallery() {
+      const got = new Set(store.get().collected || []);
+      $('gallery-count').textContent = `${got.size}/${KEYS.length}`;
+      const grid = $('gallery-grid'); grid.innerHTML = '';
+      KEYS.forEach((k, i) => {
+        const a = ARCHETYPES[k], on = got.has(k);
+        const card = el('div', 'rounded-2xl p-3 border bg-slate-900/80 text-center relative');
+        card.style.borderColor = on ? a.color + '88' : 'rgba(255,255,255,.08)';
+        if (on) card.style.boxShadow = `0 8px 24px -12px ${a.color}`;
+        const top = el('div', 'flex justify-between text-[9px] font-mono');
+        top.append(el('span', 'text-slate-500', `No.0${i + 1}`), el('span', on ? 'text-emerald-400' : 'text-slate-600', on ? '✓ สะสมแล้ว' : '🔒'));
+        card.append(top, avatar(k, 'w-20 h-20 mx-auto my-1' + (on ? '' : ' locked')),
+          el('p', 'text-[11px] font-bold font-display leading-tight', a.charEN),
+          el('p', 'text-[10px] text-slate-400 leading-tight mt-0.5', a.titleTH),
+          el('p', 'text-[9px] text-slate-500 leading-snug mt-1', a.mood));
+        grid.appendChild(card);
+      });
+    }
+
+    function wrapLines(ctx, text, maxWidth) {
+      const seg = (window.Intl && Intl.Segmenter) ? [...new Intl.Segmenter('th', { granularity: 'word' }).segment(text)].map(s => s.segment) : [...text];
+      const lines = []; let line = '';
+      seg.forEach(w => { const test = line + w; if (ctx.measureText(test).width > maxWidth && line) { lines.push(line.trim()); line = w.trimStart(); } else line = test; });
+      if (line.trim()) lines.push(line.trim());
+      return lines;
+    }
+    function drawWrapped(ctx, text, x, y, maxWidth, lh, maxLines = 99) { const lines = wrapLines(ctx, text, maxWidth).slice(0, maxLines); lines.forEach((l, i) => ctx.fillText(l, x, y + i * lh)); return y + lines.length * lh; }
+    function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+    function fitFont(ctx, text, weight, start, min, family, maxW) { let s = start; ctx.font = `${weight} ${s}px ${family}`; while (ctx.measureText(text).width > maxW && s > min) { s -= 2; ctx.font = `${weight} ${s}px ${family}`; } }
+    function loadSvgImage(svg) {
+      return new Promise(res => {
+        const img = new Image(); img.onload = () => res(img); img.onerror = () => res(null);
+        img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg.replace('width="100%" height="100%"', 'width="600" height="600"'));
+      });
+    }
+    async function loadFonts() { try { await Promise.all(['700 64px Kanit', '400 32px Kanit', '600 40px Kanit', '700 40px "Space Grotesk"'].map(f => document.fonts.load(f))); } catch {} }
+    const toBlob = (c) => new Promise(r => c.toBlob(r, 'image/png'));
+
+    async function buildCard(result) {
+      await loadFonts();
+      const a = ARCHETYPES[result.key], buddy = ARCHETYPES[a.buddy];
+      const W = 1080, H = 1920, c = document.createElement('canvas'); c.width = W; c.height = H;
+      const ctx = c.getContext('2d');
+
+      const bg = ctx.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, '#0A192F'); bg.addColorStop(1, '#030914');
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+      [[540, 460, a.color + '55', 520], [980, 1750, '#0284C733', 420], [100, 1300, a.color + '22', 380]].forEach(([x, y, col, r]) => {
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, col); g.addColorStop(1, 'transparent'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      });
+      ctx.strokeStyle = a.color + 'AA'; ctx.lineWidth = 10; roundRect(ctx, 40, 40, 1000, 1840, 56); ctx.stroke();
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#10B981'; ctx.font = '700 32px "Space Grotesk", Kanit, sans-serif'; ctx.fillText('TRINITY SECURITIES · TRISPARK', 540, 130);
+      ctx.fillStyle = '#CBD5E1';
+      fitFont(ctx, state.name ? `${state.name} คือ...` : 'MY INVESTMENT IDENTITY', 400, 32, 22, 'Kanit, sans-serif', 860);
+      ctx.fillText(state.name ? `${state.name} คือ...` : 'MY INVESTMENT IDENTITY', 540, 190);
+
+      const img = await loadSvgImage(ART[a.id]); if (img) ctx.drawImage(img, 290, 215, 500, 500);
+
+      ctx.fillStyle = '#FFFFFF'; fitFont(ctx, a.name, 700, 76, 40, '"Space Grotesk", Kanit, sans-serif', 900); ctx.fillText(a.name, 540, 790);
+      ctx.fillStyle = a.color; ctx.font = '600 50px Kanit, sans-serif'; ctx.fillText(a.titleTH, 540, 865);
+      ctx.fillStyle = '#94A3B8'; ctx.font = '400 30px Kanit, sans-serif'; ctx.fillText(`No.${String(KEYS.indexOf(a.id) + 1).padStart(2, '0')}/07 · ${a.charEN} · ${a.mood}`, 540, 920);
+      ctx.fillStyle = a.color; ctx.font = '600 30px Kanit, sans-serif'; ctx.fillText(a.tags.join('   '), 540, 985);
+
+      ctx.fillStyle = 'rgba(15,23,42,0.85)'; roundRect(ctx, 100, 1030, 880, 330, 36); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 3; ctx.stroke();
+      ctx.fillStyle = a.color; ctx.font = '700 28px "Space Grotesk", sans-serif'; ctx.fillText('INVESTOR STATS', 540, 1088);
+      Object.entries(a.stats).forEach(([k, v], i) => {
+        const y = 1150 + i * 55;
+        ctx.textAlign = 'left'; ctx.fillStyle = '#CBD5E1'; ctx.font = '400 30px Kanit, sans-serif'; ctx.fillText(STAT_LABELS[k], 150, y + 10);
+        ctx.fillStyle = '#1E293B'; roundRect(ctx, 360, y - 8, 500, 20, 10); ctx.fill();
+        ctx.fillStyle = a.color; roundRect(ctx, 360, y - 8, Math.max(20, v * 5), 20, 10); ctx.fill();
+        ctx.textAlign = 'right'; ctx.fillStyle = '#FFFFFF'; ctx.font = '700 30px "Space Grotesk", sans-serif'; ctx.fillText(String(v), 935, y + 10);
+      });
+      ctx.textAlign = 'center';
+
+      ctx.fillStyle = 'rgba(16,185,129,0.10)'; roundRect(ctx, 100, 1390, 880, 190, 36); ctx.fill();
+      ctx.strokeStyle = 'rgba(16,185,129,0.35)'; ctx.lineWidth = 3; ctx.stroke();
+      ctx.fillStyle = '#6EE7B7'; ctx.font = '600 32px Kanit, sans-serif'; ctx.fillText('พลังพิเศษ', 540, 1450);
+      ctx.fillStyle = '#FFFFFF'; ctx.font = '400 34px Kanit, sans-serif'; drawWrapped(ctx, a.power, 540, 1510, 800, 48, 2);
+
+      ctx.fillStyle = '#CBD5E1'; ctx.font = '400 30px Kanit, sans-serif'; ctx.fillText(`คู่หูการลงทุน: ${buddy.titleTH} (${buddy.charEN})`, 540, 1640);
+      ctx.fillStyle = '#F5B718'; ctx.font = '400 28px Kanit, sans-serif'; drawWrapped(ctx, `“${a.mindset}”`, 540, 1700, 860, 42, 1);
+
+      const host = location.host || 'trinitythai.com';
+      ctx.fillStyle = '#10B981'; ctx.font = '700 38px Kanit, sans-serif'; ctx.fillText(`คุณคือตัวไหน? ลองเลย → ${host}`, 540, 1790);
+      ctx.fillStyle = '#64748B'; ctx.font = '400 22px Kanit, sans-serif'; ctx.fillText('เพื่อการเรียนรู้เท่านั้น ไม่ใช่คำแนะนำการลงทุน · การลงทุนมีความเสี่ยง', 540, 1845);
+      return c;
+    }
+
+    function withParams(base, params) { const u = new URL(base, location.href); Object.entries(params).forEach(([k, v]) => u.searchParams.set(k, v)); return u.toString(); }
+    function appLink(key, source) {
+      const utm = { utm_source: source, utm_medium: 'social', utm_campaign: CONFIG.UTM_CAMPAIGN };
+      return CONFIG.SHARE_PAGE_URL ? withParams(CONFIG.SHARE_PAGE_URL.replace('{key}', key), utm) : withParams(CONFIG.APP_URL, { r: key, ...utm });
+    }
+    const shareText = (a) => `ฉันคือ ${a.titleTH} (${a.charEN}) 🔥 แล้วคุณล่ะเป็นตัวไหน? มาดูกันว่าเราเป็นคู่หูหรือคู่ปะทะ`;
+    const copyQuiet = (text) => { try { navigator.clipboard && navigator.clipboard.writeText(text).catch(() => {}); } catch {} };
+    const openWin = (url) => window.open(url, '_blank', 'noopener,noreferrer,width=640,height=600');
+
+    let shareAsset = null;
+    function setShareReady(on) {
+      $('btn-share-ig').disabled = !on; $('btn-save-image').disabled = !on;
+      $('share-loading').classList.toggle('hidden', on);
+    }
+    async function openShare() {
+      if (!state.result) return;
+      const key = state.result.key;
+      openModal('modal-share');
+      $('share-inapp').hidden = !IN_APP;
+      $('btn-share-more').hidden = !navigator.share;
+      track('open_share', { archetype: key });
+      if (shareAsset && shareAsset.key === key && shareAsset.name === state.name) return;
+      setShareReady(false);
+      try {
+        const blob = await toBlob(await buildCard(state.result));
+        if (shareAsset) URL.revokeObjectURL(shareAsset.url);
+        shareAsset = { key, name: state.name, file: new File([blob], `TriSpark_${key}.png`, { type: 'image/png' }), url: URL.createObjectURL(blob) };
+        $('share-preview').src = shareAsset.url;
+        setShareReady(true);
+      } catch { toast('สร้างการ์ดไม่สำเร็จ ลองอีกครั้ง'); }
+    }
+    function saveImage(silent) {
+      if (!shareAsset) return;
+      const a = el('a'); a.href = shareAsset.url; a.download = shareAsset.file.name;
+      document.body.appendChild(a); a.click(); a.remove();
+      if (!silent) { toast(IN_APP ? 'ถ้าดาวน์โหลดไม่ได้ ให้กดค้างที่รูปตัวอย่างเพื่อบันทึก' : 'บันทึกการ์ด 9:16 แล้ว 📸'); track('share', { method: 'download', archetype: shareAsset.key }); }
+    }
+    function shareIG() {
+      if (!shareAsset) return;
+      const key = shareAsset.key;
+      copyQuiet(appLink(key, 'instagram'));
+      if (navigator.canShare && navigator.canShare({ files: [shareAsset.file] })) {
+        navigator.share({ files: [shareAsset.file] })
+          .then(() => { track('share', { method: 'ig_story_native', archetype: key }); toast('อย่าลืมเพิ่ม "สติกเกอร์ลิงก์" แล้ววางลิงก์ที่คัดลอกไว้ 🔗', 4000); })
+          .catch(e => { if (e && e.name === 'AbortError') return; igFallback(key); });
+        return;
+      }
+      igFallback(key);
+    }
+    function igFallback(key) {
+      track('share', { method: 'ig_story_fallback', archetype: key });
+      if (IN_APP) { toast('กดค้างที่รูปตัวอย่างเพื่อบันทึก แล้วเปิด IG Story เลือกรูปจากคลัง · ลิงก์คัดลอกไว้แล้ว', 5000); return; }
+      saveImage(true);
+      toast('บันทึกการ์ดแล้ว เปิด IG Story แล้วเลือกรูปจากคลัง · ลิงก์คัดลอกไว้สำหรับสติกเกอร์ 🔗', 5000);
+      if (IS_MOBILE) setTimeout(() => { location.href = 'instagram://story-camera'; }, 1300);
+    }
+    function shareFB() {
+      if (!state.result) return; const key = state.result.key;
+      openWin(`https://www.facebook.com/sharer/sharer.php?u=${enc(appLink(key, 'facebook'))}&hashtag=${enc('#TriSpark')}`);
+      track('share', { method: 'facebook', archetype: key });
+    }
+    function shareLINE() {
+      if (!state.result) return; const key = state.result.key, a = ARCHETYPES[key];
+      openWin(`https://line.me/R/share?text=${enc(shareText(a) + ' 👉 ' + appLink(key, 'line'))}`);
+      track('share', { method: 'line', archetype: key });
+    }
+    function shareX() {
+      if (!state.result) return; const key = state.result.key, a = ARCHETYPES[key];
+      openWin(`https://twitter.com/intent/tweet?text=${enc(shareText(a))}&url=${enc(appLink(key, 'x'))}&hashtags=TriSpark`);
+      track('share', { method: 'x', archetype: key });
+    }
+    function shareMore() {
+      if (!state.result || !navigator.share) return; const key = state.result.key, a = ARCHETYPES[key];
+      navigator.share({ title: 'TriSpark', text: shareText(a), url: appLink(key, 'native') })
+        .then(() => track('share', { method: 'native_link', archetype: key })).catch(() => {});
+    }
+    async function copyLink() {
+      if (!state.result) return;
+      const key = state.result.key, a = ARCHETYPES[key];
+      try { await navigator.clipboard.writeText(`${shareText(a)} 👉 ${appLink(key, 'copy_link')}`); toast('คัดลอกลิงก์แล้ว ส่งให้เพื่อนได้เลย 🔗'); track('share', { method: 'copy_link', archetype: key }); }
+      catch { toast('คัดลอกไม่สำเร็จ ลองอีกครั้ง'); }
+    }
+
+    function openAccount() { $('account-consent').checked = false; $('btn-go-account').disabled = true; openModal('modal-account'); track('cta_open_account_modal', { archetype: state.result && state.result.key }); }
+    function goAccount() {
+      const key = state.result ? state.result.key : 'unknown';
+      track('cta_go_account', { archetype: key });
+      window.open(withParams(CONFIG.ACCOUNT_URL, { utm_source: 'trispark', utm_medium: 'quiz', utm_campaign: CONFIG.UTM_CAMPAIGN, utm_content: key }), '_blank', 'noopener,noreferrer');
+      closeModal();
+    }
+
+    const actions = {
+      'start': () => { playSound('tap'); openIntro(); },
+      'intro-next': introNext,
+      'intro-skip': introSkip,
+      'continue': advance,
+      'open-about': () => { playSound('tap'); openModal('modal-about'); },
+      'open-gallery': () => { playSound('tap'); renderGallery(); openModal('modal-gallery'); track('open_gallery'); },
+      'close-modal': () => { playSound('tap'); closeModal(); },
+      'back': goBack,
+      'toggle-sound': () => { state.muted = !state.muted; store.set({ muted: state.muted }); applySoundUI(); toast(state.muted ? 'ปิดเสียงแล้ว 🔇' : 'เปิดเสียงแล้ว 🔊'); },
+      'open-share': () => { playSound('tap'); openShare(); },
+      'share-ig': shareIG, 'share-fb': shareFB, 'share-line': shareLINE, 'share-x': shareX, 'share-more': shareMore,
+      'save-image': () => saveImage(false),
+      'copy-link': () => { playSound('tap'); copyLink(); },
+      'restart': () => { playSound('tap'); track('restart'); showView('landing'); },
+      'open-account': () => { playSound('tap'); openAccount(); },
+      'go-account': goAccount,
+      'view-last': () => { const last = store.get().last; if (last && ARCHETYPES[last.key]) renderResult(last); }
+    };
+
+    document.addEventListener('click', (e) => {
+      const opt = e.target.closest('[data-option]');
+      if (opt && state.view === 'game') { selectOption(Number(opt.dataset.option)); return; }
+      const act = e.target.closest('[data-action]');
+      if (act && actions[act.dataset.action]) { actions[act.dataset.action](); return; }
+      if (activeModal && e.target === activeModal) closeModal();
+    });
+    $('account-consent').addEventListener('change', (e) => { $('btn-go-account').disabled = !e.target.checked; });
+    $('nickname').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); introNext(); } });
+
+    document.addEventListener('keydown', (e) => {
+      if (activeModal) {
+        if (e.key === 'Escape') { closeModal(); return; }
+        if (e.key === 'Tab') {
+          const f = [...activeModal.querySelectorAll(FOCUSABLE)].filter(n => !n.hidden); if (!f.length) return;
+          const first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+        return;
+      }
+      if (state.view === 'game') {
+        if (state.locked) { if (['Enter', ' ', 'ArrowRight'].includes(e.key)) { e.preventDefault(); advance(); } return; }
+        const map = { '1': 0, '2': 1, '3': 2, a: 0, b: 1, c: 2 }, k = e.key.toLowerCase();
+        if (k in map) selectOption(map[k]);
+        else if (e.key === 'Backspace' || e.key === 'ArrowLeft') goBack();
+      }
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stopShowcase(); else if (state.view === 'landing') startShowcase(); });
+
+    function refreshLanding() {
+      const s = store.get();
+      $('btn-view-last').hidden = !(s.last && ARCHETYPES[s.last.key]);
+      $('landing-collect').textContent = `${(s.collected || []).length}/${KEYS.length}`;
+    }
+    function init() {
+      const saved = store.get();
+      state.muted = !!saved.muted; state.name = saved.name || '';
+      applySoundUI(); refreshLanding(); buildDots(); startShowcase();
+      const params = new URLSearchParams(location.search);
+      const ref = params.get('r');
+      if (ref && ARCHETYPES[ref]) {
+        const a = ARCHETYPES[ref], banner = $('referral-banner');
+        banner.textContent = `เพื่อนของคุณคือ “${a.titleTH}” (${a.charEN}) 🔥 มาดูว่าคุณเป็นคู่หูหรือคู่ปะทะ!`;
+        banner.hidden = false; track('referral_landing', { ref_archetype: ref, source: params.get('utm_source') || 'unknown' });
+      }
+      track('page_view', { referral: ref || 'none', in_app: IN_APP });
+    }
+    init();
+  })();
+  </script>
+</body>
+</html>
